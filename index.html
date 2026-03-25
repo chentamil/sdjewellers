@@ -1,467 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sri Dhanalakshmi Jewellers | Kanchipuram</title>
-    <meta name="description"
-        content="Trusted Jewellery Store since 1960. Gold, Silver & Custom Jewellery in Kanchipuram.">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-        /* GLOBAL */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: #fffaf5;
-            color: #2c2c2c;
-        }
+<!DOCTYPE html> <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sri Dhanalakshmi Jewellers | Kanchipuram</title><meta name="description" content="Trusted Jewellery Store since 1960. Gold, Silver & Custom Jewellery in Kanchipuram.">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"><link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+/* GLOBAL */body {    font-family: 'Poppins', sans-serif;    background: #fffaf5;    color: #2c2c2c;}
 
 
-        /* GOLD NAVBAR */
-        .navbar {
-            background: linear-gradient(90deg, #5a0f1c, #8b1e2d);
-        }
-
-        /* BRAND */
-        .navbar-brand {
-            color: gold !important;
-            font-size: 1.2rem;
-        }
-
-        /* LINKS */
-        .navbar .nav-link {
-            color: #fff !important;
-            margin-left: 10px;
-            transition: 0.3s;
-        }
-
-        .navbar .nav-link:hover {
-            color: gold !important;
-        }
-
-        /* TOGGLER FIX */
-        .navbar-toggler {
-            border: 1px solid rgba(255, 255, 255, 0.6);
-        }
-
-        .navbar-toggler-icon {
-            filter: invert(1);
-        }
-
-        /* HERO */
-        .hero img {
-            height: 700px;
-            object-fit: cover;
-            filter: brightness(60%);
-        }
-
-        .carousel-caption h1 {
-            font-size: 2.8rem;
-            color: #ffd700;
-        }
-
-        .carousel-caption p {
-            font-size: 1.2rem;
-        }
-
-        /* GOLD BUTTON */
-        .btn-gold {
-            background: linear-gradient(45deg, #d4af37, #ffd700);
-            border: none;
-            color: #000;
-            font-weight: 600;
-        }
-
-        /* SECTION */
-        section {
-            padding: 60px 0;
-        }
-
-        /* CARDS */
-        .card {
-            border: none;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-        }
-
-        /* HIGHLIGHT */
-        .highlight {
-            background: linear-gradient(135deg, #8b1e2d, #d4af37);
-            color: #fff;
-        }
-
-        /* FOOTER */
-        footer {
-            background: #3b0a14;
-            color: #fff;
-        }
-
-        /* COLLECTION BOX */
-        .collection-box {
-            background: #fff;
-            padding: 25px;
-            border-radius: 10px;
-            font-weight: 500;
-        }
-
-        /* WHY US */
-        .why-box {
-            background: #fff;
-            padding: 20px;
-            border-left: 4px solid #d4af37;
-        }
-
-        img {
-            transition: 0.3s;
-        }
-
-        img:hover {
-            transform: scale(1.05);
-        }
-
-        .text-warning i {
-            color: gold;
-        }
-
-        .carousel-item {
-            transition: transform 0.6s ease;
-        }
-
-        footer {
-            background: linear-gradient(135deg, #3b0a14, #8b1e2d);
-        }
-
-        footer a:hover {
-            color: gold !important;
-        }
-
-        footer h5 {
-            font-weight: 600;
-        }
-
-        .certificate-box {
-            max-width: 700px;
-            margin: auto;
-            padding: 15px;
-            background: #fff;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .certificate-img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            cursor: zoom-in;
-            transition: 0.3s;
-        }
-
-        .certificate-img:hover {
-            transform: scale(1.03);
-        }
-
-        .gallery-img {
-            width: 100%;
-            height: 250px;
-            /* Fixed height for all images */
-            object-fit: cover;
-            /* Full div, no distortion */
-            border-radius: 12px;
-            transition: 0.3s;
-        }
-
-        .gallery-img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
-        }
-
-        @media(max-width:768px) {
-            .gallery-img {
-                height: 180px;
-            }
-        }
-    </style>
-</head>
-
+/* GOLD NAVBAR */.navbar {    background: linear-gradient(90deg, #5a0f1c, #8b1e2d);}
+/* BRAND */.navbar-brand {    color: gold !important;    font-size: 1.2rem;}
+/* LINKS */.navbar .nav-link {    color: #fff !important;    margin-left: 10px;    transition: 0.3s;}
+.navbar .nav-link:hover {    color: gold !important;}
+/* TOGGLER FIX */.navbar-toggler {    border: 1px solid rgba(255,255,255,0.6);}
+.navbar-toggler-icon {    filter: invert(1);}
+/* HERO */.hero img {    height: 700px;    object-fit: cover;    filter: brightness(60%);}.carousel-caption h1 {    font-size: 2.8rem;    color: #ffd700;}.carousel-caption p {    font-size: 1.2rem;}
+/* GOLD BUTTON */.btn-gold {    background: linear-gradient(45deg, #d4af37, #ffd700);    border: none;    color: #000;    font-weight: 600;}
+/* SECTION */section {    padding: 60px 0;}
+/* CARDS */.card {    border: none;    border-radius: 12px;    box-shadow: 0 10px 25px rgba(0,0,0,0.08);}
+/* HIGHLIGHT */.highlight {    background: linear-gradient(135deg, #8b1e2d, #d4af37);    color: #fff;}
+/* FOOTER */footer {    background: #3b0a14;    color: #fff;}
+/* COLLECTION BOX */.collection-box {    background: #fff;    padding: 25px;    border-radius: 10px;    font-weight: 500;}
+/* WHY US */.why-box {    background: #fff;    padding: 20px;    border-left: 4px solid #d4af37;}
+img {    transition: 0.3s;}img:hover {    transform: scale(1.05);}
+.text-warning i {    color: gold;}
+.carousel-item {    transition: transform 0.6s ease;}
+footer {    background: linear-gradient(135deg, #3b0a14, #8b1e2d);}
+footer a:hover {    color: gold !important;}
+footer h5 {    font-weight: 600;}
+.certificate-box {    max-width: 700px;    margin: auto;    padding: 15px;    background: #fff;    border-radius: 12px;    box-shadow: 0 10px 30px rgba(0,0,0,0.1);}
+.certificate-img {    width: 100%;    height: auto;    border-radius: 10px;    cursor: zoom-in;    transition: 0.3s;}
+.certificate-img:hover {    transform: scale(1.03);}
+.gallery-img {    width: 100%;    height: 250px;          /* Fixed height for all images */    object-fit: cover;      /* Full div, no distortion */    border-radius: 12px;    transition: 0.3s;}
+.gallery-img:hover {    transform: scale(1.05);    box-shadow: 0 15px 40px rgba(212,175,55,0.4);}
+@media(max-width:768px){    .gallery-img{        height:180px;    }}</style></head>
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand fw-bold"><img data-visualcompletion="media-vc-image"
-                    style="width: 48px;height: 48px; object-fit: contain;border-radius: 4px;"
-                    src="https://scontent.fixm4-4.fna.fbcdn.net/v/t39.30808-6/244976666_2635125379964911_6034327754134170789_n.jpg?_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=1d70fc&amp;_nc_ohc=w-czsa9l0x0Q7kNvwEp6quv&amp;_nc_oc=AdrGmEa5liZbhXEfuKvXo2nVoMuf2CZFzGgjzLqWsQQYCzvnfSXJN2TX3HA78hg4YM4MnBQyAtyg8o_a2UqzJe4s&amp;_nc_zt=23&amp;_nc_ht=scontent.fixm4-4.fna&amp;_nc_gid=HlcuyO3ilVpLgZT8Jv59JA&amp;_nc_ss=7a30f&amp;oh=00_AfzJDjEeiei0Aax7kIDC3a7iNcY4gAYQ5dTuTNFw7fr1ZA&amp;oe=69C6C29D ">
-                Sri Dhanalakshmi Jewellers</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">    <span
-                    class="navbar-toggler-icon"></span></button>
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#collections">Collections</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#why">Why Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- HERO -->
-    <section class="hero">
-        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active"><img
-                        src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?q=80&w=1600">
-                    <div class="carousel-caption">
-                        <h1>Elegance in Every Ornament</h1>
-                        <p>Since 1960 – Trusted Jewellery in Kanchipuram</p><a href="tel:7339392916"
-                            class="btn btn-gold">Call Now</a>
-                    </div>
-                </div>
-                <div class="carousel-item"><img
-                        src="https://scontent.fixm4-1.fna.fbcdn.net/v/t39.30808-6/476633215_3708478729296232_1533335770771745628_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=_dgx6mODd1IQ7kNvwH_rQ8x&_nc_oc=Adp9SiHx-3ewMwLxS0SEkAzi9ez3gur8jj5GcQJuCN0IYgFdiV4RgoNdvvVU2VnS_e74A0Q2KC3PmlVzL4yQ3XPP&_nc_zt=23&_nc_ht=scontent.fixm4-1.fna&_nc_gid=G1bA5xBE1x5BKevMJO08ug&_nc_ss=7a30f&oh=00_Afw_dsbnVEMgOrFqTt-0QZ51KyWutL4ARRrZgcZDqzQ-Xw&oe=69C6A792">
-                    <div class="carousel-caption">
-                        <h1>Gold • Silver • Custom Designs</h1>
-                        <p>Crafted with Tradition & Trust</p>
-                    </div>
-                </div>
+<!-- NAVBAR --><nav class="navbar navbar-expand-lg navbar-dark fixed-top"><div class="container">
+<a class="navbar-brand fw-bold"><img data-visualcompletion="media-vc-image" style="width: 48px;height: 48px; object-fit: contain;border-radius: 4px;" src="https://scontent.fixm4-4.fna.fbcdn.net/v/t39.30808-6/244976666_2635125379964911_6034327754134170789_n.jpg?_nc_cat=102&amp;ccb=1-7&amp;_nc_sid=1d70fc&amp;_nc_ohc=w-czsa9l0x0Q7kNvwEp6quv&amp;_nc_oc=AdrGmEa5liZbhXEfuKvXo2nVoMuf2CZFzGgjzLqWsQQYCzvnfSXJN2TX3HA78hg4YM4MnBQyAtyg8o_a2UqzJe4s&amp;_nc_zt=23&amp;_nc_ht=scontent.fixm4-4.fna&amp;_nc_gid=HlcuyO3ilVpLgZT8Jv59JA&amp;_nc_ss=7a30f&amp;oh=00_AfzJDjEeiei0Aax7kIDC3a7iNcY4gAYQ5dTuTNFw7fr1ZA&amp;oe=69C6C29D " > Sri Dhanalakshmi Jewellers</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">    <span class="navbar-toggler-icon"></span></button>
+<div class="collapse navbar-collapse" id="menu"><ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#collections">Collections</a></li>
+<li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+<li class="nav-item"><a class="nav-link" href="#why">Why Us</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+</ul></div>
+</div></nav>
+<!-- HERO --><section class="hero"><div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active"><img src="https://images.unsplash.com/photo-1601121141461-9d6647bca1ed?q=80&w=1600"><div class="carousel-caption"><h1>Elegance in Every Ornament</h1><p>Since 1960 – Trusted Jewellery in Kanchipuram</p><a href="tel:7339392916" class="btn btn-gold">Call Now</a></div></div>
+<div class="carousel-item"><img src="https://scontent.fixm4-1.fna.fbcdn.net/v/t39.30808-6/476633215_3708478729296232_1533335770771745628_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=_dgx6mODd1IQ7kNvwH_rQ8x&_nc_oc=Adp9SiHx-3ewMwLxS0SEkAzi9ez3gur8jj5GcQJuCN0IYgFdiV4RgoNdvvVU2VnS_e74A0Q2KC3PmlVzL4yQ3XPP&_nc_zt=23&_nc_ht=scontent.fixm4-1.fna&_nc_gid=G1bA5xBE1x5BKevMJO08ug&_nc_ss=7a30f&oh=00_Afw_dsbnVEMgOrFqTt-0QZ51KyWutL4ARRrZgcZDqzQ-Xw&oe=69C6A792"><div class="carousel-caption"><h1>Gold • Silver • Custom Designs</h1><p>Crafted with Tradition & Trust</p></div></div>
 
-                <div class="carousel-item"><img
-                        src="https://scontent.fixm4-2.fna.fbcdn.net/v/t39.30808-6/469035586_18261547147249727_5186812971019735867_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=13d280&_nc_ohc=u3TRbFBwMo0Q7kNvwGhEEFr&_nc_oc=AdpQcM1IzRMhWKXSQtda4UgLYLDxj1lnbjyLfyTMH5qKl3e2LKnpiU6J1GkaMH7JZasMeS1BcctL7gNndbXSV1Bx&_nc_zt=23&_nc_ht=scontent.fixm4-2.fna&_nc_gid=o36xSk4H9hts552pvFJ6Tw&_nc_ss=7a30f&oh=00_AfxBZI1hs_aG9frketAsswE-EK0oXG59DbIv9xOu3yGE0w&oe=69C6C6E5">
-                    <div class="carousel-caption">
-                        <h1>Example Test</h1>
-                        <p>Example Sub text</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ABOUT -->
-    <section id="about" class="text-center">
-        <div class="container">
-            <h2>About Us</h2>
-            <p class="lead">Sri Dhanalakshmi Jewellers, established in 1960, is a trusted name in Kanchipuram offering
-                finely crafted gold, silver, and custom jewellery.</p>
-            <p>Located near New Railway Station, we are known for quality, trust, and customer satisfaction built over
-                decades.</p>
-        </div>
-    </section>
-    <!-- COLLECTIONS -->
-    <section id="collections" class="bg-light container py-5 text-center">  <h2 class="mb-4 text-warning">Our Jewellery
-            Gallery</h2>
-          <div class="row g-3">
-                <!-- Existing images -->    <div class="col-6 col-md-4">      <img
-                    src="https://scontent.fixm4-3.fna.fbcdn.net/v/t39.30808-6/474083757_3688476994629739_5443534496452951025_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Mehn_b88gh4Q7kNvwHvFSsR&_nc_oc=AdrldijF2p69_XVChiPu8QSMD4IEV1bSWstSke-YVdulMY_bq-TYja7VX_kZlYK70rApy8a2zq6syyDqmam-8vxM&_nc_zt=23&_nc_ht=scontent.fixm4-3.fna&_nc_gid=XdqEbAGZ_uXbX6jm4tdXBw&_nc_ss=7a30f&oh=00_AfxY1rSSHY0vFK1XxBoP4uQkS5D_PluYf6sleMy73vL3Uw&oe=69C6A21E"
-                    class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img
-                    src="https://scontent.fixm4-3.fna.fbcdn.net/v/t39.30808-6/504658667_3847734495370654_8318315659865951110_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0327a3&_nc_ohc=vDkdhyObZGgQ7kNvwGeAaZI&_nc_oc=AdqVQH0RPSlX60qXDr1azGvY9vkIo8EPyGpBJGpoqP3Lp_CRWH261hn7cq3d35lqQF_NHlYLrISoLseNfycjSLn8&_nc_zt=23&_nc_ht=scontent.fixm4-3.fna&_nc_gid=wty2Z6IDN7gWW1h-WYAcdw&_nc_ss=7a30f&oh=00_Afzg1PSWRb_78pbAzYiNelarXe8MYQureczpJJ1_rr4kmA&oe=69C6BFD0"
-                    class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img
-                    src="https://scontent.fixm4-4.fna.fbcdn.net/v/t39.30808-6/504108042_3846471815496922_1152517636442010418_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=b895b5&_nc_ohc=4Ttk4hr_AlcQ7kNvwE4pQTr&_nc_oc=AdobtEBxb0RAiuwdSP3iE05M-6PDig1iN3-vhcz4rJFmJf_jAfpv2eDiQbIArRN7pQxabC5GRZjM_EWydYjAljZP&_nc_zt=23&_nc_ht=scontent.fixm4-4.fna&_nc_gid=FZ1r-MYTv4m8nk3k1PqUWw&_nc_ss=7a30f&oh=00_AfxG_m4HIt7Xak5DTtQfvOih7Gg_rZ3lJ_olEvlxe5czjw&oe=69C69B12"
-                    class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img
-                    src="https://scontent.fixm4-1.fna.fbcdn.net/v/t39.30808-6/506049609_3861739370636833_4018994090634721011_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=coPuHv5eF1wQ7kNvwGaQ9pF&_nc_oc=AdoXTFnFKKHkkC2kSi9je9_8HRDyXUuV2hcx5U5_eVHLHZlGVDZ3ZWk5hRXg6baojS4uSnkMLYhvpTUx0euJUW_a&_nc_zt=23&_nc_ht=scontent.fixm4-1.fna&_nc_gid=fCbyYoseuQthpRr6gNlL2A&_nc_ss=7a30f&oh=00_AfwvKCTs6W5dvJ7ab-QBMh2I8GWBuR01NQlAZRtDjtTAWA&oe=69C6CEE1"
-                    class="gallery-img">    </div>
-                <!-- Remaining images -->    <div class="col-6 col-md-4">      <img
-                    src="https://scontent.fixm4-4.fna.fbcdn.net/v/t39.30808-6/506931404_3861739413970162_8036527737920213491_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_ohc=9qZoFaMvirYQ7kNvwHNJlMt&_nc_oc=AdrvFqfLZppPZCYBKZ3JM8nEhzWWOf1XKf4RJHSaxYHMbXsxCqM3VvvNRZ1ybxhuoigBQ-7O3UT1-cVvs273rBWd&_nc_zt=23&_nc_ht=scontent.fixm4-4.fna&_nc_gid=aNigjOhChWjjQKqn2cqX1A&_nc_ss=7a30f&oh=00_AfyQdyE38q2iPogsmEP_boyXFNc_MMz-sVjJl7WkdiwtXA&oe=69C6CF17"
-                    class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img
-                    src="https://scontent.fixm4-2.fna.fbcdn.net/v/t39.30808-6/513086177_3881243355353101_4426562136537476952_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Ma5hyf-ANBEQ7kNvwHkAvWI&_nc_oc=AdqCVd6u89D3zlUQVMqhxLaG5NRhRuy0fpT8TNqDLCs71Eiehu1ePmj2kqHcNTij5zkj2PHmuyKpXI4UuzTE862w&_nc_zt=23&_nc_ht=scontent.fixm4-2.fna&_nc_gid=fX7e4sa6tFtExwfDwtmDRg&_nc_ss=7a30f&oh=00_Afw7LOVdFf4WIrGEy_PrSDeKTpvcB0LHuprb0ZQ8KZ6Txg&oe=69C6A4A5"
-                    class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img
-                    src="https://scontent.fixm4-1.fna.fbcdn.net/v/t39.30808-6/513074257_3882301961913907_1922356409792459068_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=iIgWYO04FzQQ7kNvwH__ryz&_nc_oc=AdoRDmmaslE4x3mqH6eXp_NyCFQqtmMR1mUTZ7ChRs5XvbRYr_WXmX8bIult_K9CXfb58G1MHi4FnDx6_poJNTAL&_nc_zt=23&_nc_ht=scontent.fixm4-1.fna&_nc_gid=t_eZEEjLg48BGTnEqglM0w&_nc_ss=7a30f&oh=00_Afy2kSBuFtdssz-G6rhsNuIlEiEYi_mKO585e0-oWz3ezQ&oe=69C6A6C0"
-                    class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img
-                    src="https://scontent.fixm4-4.fna.fbcdn.net/v/t1.6435-9/51491118_1635592166584909_8639579131131985920_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=0327a3&_nc_ohc=BzcxXL1QYtIQ7kNvwHtmSzO&_nc_oc=AdonYacAmVOXhSOfmzEs3gAtzRdn2iydwKbMYmnOe0RHdfgZPc36K8giX1c5vcGac-bI9XsrRs4Jg57_Ey4xTUSw&_nc_zt=23&_nc_ht=scontent.fixm4-4.fna&_nc_gid=z_im7VC8aGmLupaadv2tKw&_nc_ss=7a30f&oh=00_AfzsJCJP3zGNzHWzuQDDXYPgRIwHpi6CHIPY_rf9xnLD1g&oe=69E86703"
-                    class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img
-                    src="https://scontent.fixm4-1.fna.fbcdn.net/v/t39.30808-6/476633215_3708478729296232_1533335770771745628_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=_dgx6mODd1IQ7kNvwH_rQ8x&_nc_oc=Adp9SiHx-3ewMwLxS0SEkAzi9ez3gur8jj5GcQJuCN0IYgFdiV4RgoNdvvVU2VnS_e74A0Q2KC3PmlVzL4yQ3XPP&_nc_zt=23&_nc_ht=scontent.fixm4-1.fna&_nc_gid=G1bA5xBE1x5BKevMJO08ug&_nc_ss=7a30f&oh=00_Afw_dsbnVEMgOrFqTt-0QZ51KyWutL4ARRrZgcZDqzQ-Xw&oe=69C6A792"
-                    class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img
-                    src="https://scontent.fixm4-4.fna.fbcdn.net/v/t39.30808-6/474968302_3694955053981933_8304679423193291137_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_ohc=9GNnWfpohPYQ7kNvwGhnIwf&_nc_oc=AdpzFVgM9G5_-2xjRf1mkb7BSIqbXcEYq4yrPHJJ6-X7aQrGiyjJSqYqb7O_8oWm2AdUA8RVdZhdY3ZwfRkJeBbM&_nc_zt=23&_nc_ht=scontent.fixm4-4.fna&_nc_gid=yz4qEgqf844vFCZwwmMiBQ&_nc_ss=7a30f&oh=00_Afx-Oyb9zQjshtTpZGGo1yFNw4IBCYn1jJeeel9vJdmXTg&oe=69C6B827"
-                    class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img
-                    src="https://scontent.fixm4-3.fna.fbcdn.net/v/t39.30808-6/476634727_3708478795962892_1667089446093541914_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_ohc=EI4ayUCVcAsQ7kNvwHIj_6h&_nc_oc=AdrEVMhi9aqyGAwPo90i9yAifvTFQbdWIo1R_7ACDj8FwAODChJvlzGufv7ZdUzKNfqRiSViHjEezc4tW_r2FbJi&_nc_zt=23&_nc_ht=scontent.fixm4-3.fna&_nc_gid=6YYmdMjqrPIFKpiZxusdLA&_nc_ss=7a30f&oh=00_AfxKIYji3BdLG_IPeTZjpuZZCoA7CRV6sRqtK0P58b_K3g&oe=69C692B6"
-                    class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img
-                    src="https://scontent.fixm4-3.fna.fbcdn.net/v/t39.30808-6/477785117_3708478445962927_7426267486102862705_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=9JRzNnjfgsQQ7kNvwGrkFE-&_nc_oc=AdrK6cCSgVi2zj08ztNJmY9TszcYXWQLLgJJiLGxaGINJ26mzpFiFs-QV46RwXwcngeXm7aR6HgUg_7mjmSs1Jz7&_nc_zt=23&_nc_ht=scontent.fixm4-3.fna&_nc_gid=T_9y6Iq1vndX-TtmJ5c5yg&_nc_ss=7a30f&oh=00_Afx0L2kCihWoW5r6gZCD5Ls_PKOLefbshWipUAYgoi_eMA&oe=69C6BD3F"
-                    class="gallery-img">    </div>
-              </div>
-    </section><!--  -->
-    <div class="row mt-4 g-4">
-        <div class="col-md-3">
-            <div class="collection-box">Gold Necklaces</div>
-        </div>
-        <div class="col-md-3">
-            <div class="collection-box">Bridal Jewellery</div>
-        </div>
-        <div class="col-md-3">
-            <div class="collection-box">Bangles & Chains</div>
-        </div>
-        <div class="col-md-3">
-            <div class="collection-box">Temple Jewellery</div>
-        </div>
-        <div class="col-md-3">
-            <div class="collection-box">Silver Articles</div>
-        </div>
-        <div class="col-md-3">
-            <div class="collection-box">Diamond Jewellery</div>
-        </div>
-        <div class="col-md-3">
-            <div class="collection-box">Custom Designs</div>
-        </div>
-        <div class="col-md-3">
-            <div class="collection-box">Antique Collections</div>
-        </div>
-    </div>
-    </div>
-    </section>
-    <!-- OFFER -->
-    <section class="highlight text-center">
-        <div class="container">
-            <h2>Festive Offer</h2>
-            <p>Special Discounts on Making Charges</p>
-            <p><strong>Limited Time Offer</strong></p>
-        </div>
-    </section>
-    <!-- SERVICES -->
-    <section id="services">
-        <div class="container">
-            <h2 class="text-center">Our Services</h2>
-            <div class="row mt-4">
-                <div class="col-md-6">
-                    <ul>
-                        <li>Hallmarked Gold Jewellery</li>
-                        <li>Custom Jewellery Design</li>
-                        <li>Old Gold Exchange</li>
-                        <li>Jewellery Repair & Polishing</li>
-                    </ul>
-                </div>
-                <div class="col-md-6">
-                    <ul>
-                        <li>Bridal Jewellery Consultation</li>
-                        <li>Silver & Gift Articles</li>
-                        <li>EMI / Easy Payment Options</li>
-                        <li>Certified Quality Assurance</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- WHY US -->
-    <section id="why" class="bg-light">
-        <div class="container">
-            <h2 class="text-center">Why Choose Us</h2>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="why-box">60+ Years of Trust</div>
-                </div>
-                <div class="col-md-4">
-                    <div class="why-box">Premium Craftsmanship</div>
-                </div>
-                <div class="col-md-4">
-                    <div class="why-box">Customer Satisfaction</div>
-                </div>
-                <div class="col-md-4">
-                    <div class="why-box">Hallmarked Jewellery</div>
-                </div>
-                <div class="col-md-4">
-                    <div class="why-box">Wide Variety</div>
-                </div>
-                <div class="col-md-4">
-                    <div class="why-box">Prime Location</div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-5 text-center">
-        <div class="container">
-            <h2>Customer Testimonials</h2>
-            <div id="testimonialCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="card p-4 mx-auto" style="max-width:600px;">
-                            <p>“Beautiful designs and very trustworthy shop. Highly recommended!”</p>
-                            <h5 class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i></h5>
-                            <p>- Lakshmi</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card p-4 mx-auto" style="max-width:600px;">
-                            <p>“Excellent gold quality and friendly service.”</p>
-                            <h5 class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i></h5>
-                            <p>- Ramesh</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="card p-4 mx-auto" style="max-width:600px;">
-                            <p>“Best place in Kanchipuram for bridal jewellery.”</p>
-                            <h5 class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                                    class="bi bi-star-fill"></i></h5>
-                            <p>- Priya</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- CONTACT -->
-    <section id="contact" class="text-center">
-        <div class="container">
-            <h2>Visit Our Store</h2>
-            <p>No 77AB, Near New Railway Station,<br>Jawaharlal Street, Big Kanchipuram - 631502</p>
-            <p><strong>GSTIN:</strong> 33AAPFS0212D1ZQ</p>
-            <p><strong>Since:</strong> 1960</p>
-        </div>
-    </section>
-    <!-- google map -->
-    <section class="py-5 bg-light text-center">
-        <div class="container">
-            <h2>Find Us</h2>
-            <iframe  
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.252848312899!2d79.7033648!3d12.8426279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52c3657fa9ae81%3A0x33959a667e978e7d!2sSri%20Dhanalakshmi%20Jewellers!5e0!3m2!1sen!2sin!4v1697834000000!5m2!1sen!2sin"
-                  width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <h3 class="mt-4">Google Reviews</h3>
-            <p>Rated 4.8 by our happy customers</p>
-            <section class="py-5 text-center bg-light">  <div class="container">    <h2 class="text-warning mb-4">Our
-                        Certificate</h2>    <p class="mb-4">Trusted for quality and authenticity</p>
-                        <div class="certificate-box">      <img
-                            src="https://content.jdmagicbox.com/el_awards/33yrkundmb-9999pmulchnstd1503874.jpg?impolicy=queryparam&im=FitAndFill=(1400,1000)&v=1"
-                            class="certificate-img" width="1183" height="845">    </div>  </div>
-            </section>
-        </div>
-    </section>
-    <!-- whatsapp --><a href="https://wa.me/917339392916" target="_blank" class="btn btn-success btn-lg shadow"
-        style="position:fixed;bottom:20px;right:20px;border-radius:50px;"><i class="bi bi-whatsapp"></i></a>
-    <!-- FOOTER -->
-    <footer class="text-center p-4">
-        <p>© 2026 Sri Dhanalakshmi Jewellers</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <footer class="pt-5 pb-3 text-white">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3">
-                    <h5 class="text-warning"><i class="bi bi-gem"></i> Sri Dhanalakshmi Jewellers</h5>
-                    <p>Since 1960, delivering trust, purity, and elegant jewellery in Kanchipuram.</p>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5 class="text-warning">Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#about" class="text-white text-decoration-none">About</a></li>
-                        <li><a href="#collections" class="text-white text-decoration-none">Collections</a></li>
-                        <li><a href="#services" class="text-white text-decoration-none">Services</a></li>
-                        <li><a href="#contact" class="text-white text-decoration-none">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 mb-3">
-                    <h5 class="text-warning">Contact</h5>
-                    <p>No 77AB, Near New Railway Station<br>Kanchipuram</p>
-                    <p><i class="bi bi-telephone"></i> 7339392916</p>
-                </div>
-            </div>
-            <hr style="border-color: rgba(255,255,255,0.2);">
-            <div class="text-center">
-                <p class="mb-0">© 2026 Sri Dhanalakshmi Jewellers</p>
-            </div>
-        </div>
-    </footer>
-</body>
+<div class="carousel-item"><img src="https://scontent.fixm4-2.fna.fbcdn.net/v/t39.30808-6/469035586_18261547147249727_5186812971019735867_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=13d280&_nc_ohc=u3TRbFBwMo0Q7kNvwGhEEFr&_nc_oc=AdpQcM1IzRMhWKXSQtda4UgLYLDxj1lnbjyLfyTMH5qKl3e2LKnpiU6J1GkaMH7JZasMeS1BcctL7gNndbXSV1Bx&_nc_zt=23&_nc_ht=scontent.fixm4-2.fna&_nc_gid=o36xSk4H9hts552pvFJ6Tw&_nc_ss=7a30f&oh=00_AfxBZI1hs_aG9frketAsswE-EK0oXG59DbIv9xOu3yGE0w&oe=69C6C6E5"><div class="carousel-caption"><h1>Example Test</h1><p>Example Sub text</p></div></div>
+</div></div></section>
+<!-- ABOUT --><section id="about" class="text-center"><div class="container">
+<h2>About Us</h2><p class="lead">Sri Dhanalakshmi Jewellers, established in 1960, is a trusted name in Kanchipuram offering finely crafted gold, silver, and custom jewellery.</p>
+<p>Located near New Railway Station, we are known for quality, trust, and customer satisfaction built over decades.</p>
+</div></section>
+<!-- COLLECTIONS -->
+<section id="collections" class="bg-light container py-5 text-center">  <h2 class="mb-4 text-warning">Our Jewellery Gallery</h2>
+  <div class="row g-3">
+    <!-- Existing images -->    <div class="col-6 col-md-4">      <img src="https://scontent.fixm4-3.fna.fbcdn.net/v/t39.30808-6/474083757_3688476994629739_5443534496452951025_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Mehn_b88gh4Q7kNvwHvFSsR&_nc_oc=AdrldijF2p69_XVChiPu8QSMD4IEV1bSWstSke-YVdulMY_bq-TYja7VX_kZlYK70rApy8a2zq6syyDqmam-8vxM&_nc_zt=23&_nc_ht=scontent.fixm4-3.fna&_nc_gid=XdqEbAGZ_uXbX6jm4tdXBw&_nc_ss=7a30f&oh=00_AfxY1rSSHY0vFK1XxBoP4uQkS5D_PluYf6sleMy73vL3Uw&oe=69C6A21E" class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img src="https://scontent.fixm4-3.fna.fbcdn.net/v/t39.30808-6/504658667_3847734495370654_8318315659865951110_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=0327a3&_nc_ohc=vDkdhyObZGgQ7kNvwGeAaZI&_nc_oc=AdqVQH0RPSlX60qXDr1azGvY9vkIo8EPyGpBJGpoqP3Lp_CRWH261hn7cq3d35lqQF_NHlYLrISoLseNfycjSLn8&_nc_zt=23&_nc_ht=scontent.fixm4-3.fna&_nc_gid=wty2Z6IDN7gWW1h-WYAcdw&_nc_ss=7a30f&oh=00_Afzg1PSWRb_78pbAzYiNelarXe8MYQureczpJJ1_rr4kmA&oe=69C6BFD0" class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img src="https://scontent.fixm4-4.fna.fbcdn.net/v/t39.30808-6/504108042_3846471815496922_1152517636442010418_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=b895b5&_nc_ohc=4Ttk4hr_AlcQ7kNvwE4pQTr&_nc_oc=AdobtEBxb0RAiuwdSP3iE05M-6PDig1iN3-vhcz4rJFmJf_jAfpv2eDiQbIArRN7pQxabC5GRZjM_EWydYjAljZP&_nc_zt=23&_nc_ht=scontent.fixm4-4.fna&_nc_gid=FZ1r-MYTv4m8nk3k1PqUWw&_nc_ss=7a30f&oh=00_AfxG_m4HIt7Xak5DTtQfvOih7Gg_rZ3lJ_olEvlxe5czjw&oe=69C69B12" class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img src="https://scontent.fixm4-1.fna.fbcdn.net/v/t39.30808-6/506049609_3861739370636833_4018994090634721011_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=coPuHv5eF1wQ7kNvwGaQ9pF&_nc_oc=AdoXTFnFKKHkkC2kSi9je9_8HRDyXUuV2hcx5U5_eVHLHZlGVDZ3ZWk5hRXg6baojS4uSnkMLYhvpTUx0euJUW_a&_nc_zt=23&_nc_ht=scontent.fixm4-1.fna&_nc_gid=fCbyYoseuQthpRr6gNlL2A&_nc_ss=7a30f&oh=00_AfwvKCTs6W5dvJ7ab-QBMh2I8GWBuR01NQlAZRtDjtTAWA&oe=69C6CEE1" class="gallery-img">    </div>
+    <!-- Remaining images -->    <div class="col-6 col-md-4">      <img src="https://scontent.fixm4-4.fna.fbcdn.net/v/t39.30808-6/506931404_3861739413970162_8036527737920213491_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=7b2446&_nc_ohc=9qZoFaMvirYQ7kNvwHNJlMt&_nc_oc=AdrvFqfLZppPZCYBKZ3JM8nEhzWWOf1XKf4RJHSaxYHMbXsxCqM3VvvNRZ1ybxhuoigBQ-7O3UT1-cVvs273rBWd&_nc_zt=23&_nc_ht=scontent.fixm4-4.fna&_nc_gid=aNigjOhChWjjQKqn2cqX1A&_nc_ss=7a30f&oh=00_AfyQdyE38q2iPogsmEP_boyXFNc_MMz-sVjJl7WkdiwtXA&oe=69C6CF17" class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img src="https://scontent.fixm4-2.fna.fbcdn.net/v/t39.30808-6/513086177_3881243355353101_4426562136537476952_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=7b2446&_nc_ohc=Ma5hyf-ANBEQ7kNvwHkAvWI&_nc_oc=AdqCVd6u89D3zlUQVMqhxLaG5NRhRuy0fpT8TNqDLCs71Eiehu1ePmj2kqHcNTij5zkj2PHmuyKpXI4UuzTE862w&_nc_zt=23&_nc_ht=scontent.fixm4-2.fna&_nc_gid=fX7e4sa6tFtExwfDwtmDRg&_nc_ss=7a30f&oh=00_Afw7LOVdFf4WIrGEy_PrSDeKTpvcB0LHuprb0ZQ8KZ6Txg&oe=69C6A4A5" class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img src="https://scontent.fixm4-1.fna.fbcdn.net/v/t39.30808-6/513074257_3882301961913907_1922356409792459068_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=iIgWYO04FzQQ7kNvwH__ryz&_nc_oc=AdoRDmmaslE4x3mqH6eXp_NyCFQqtmMR1mUTZ7ChRs5XvbRYr_WXmX8bIult_K9CXfb58G1MHi4FnDx6_poJNTAL&_nc_zt=23&_nc_ht=scontent.fixm4-1.fna&_nc_gid=t_eZEEjLg48BGTnEqglM0w&_nc_ss=7a30f&oh=00_Afy2kSBuFtdssz-G6rhsNuIlEiEYi_mKO585e0-oWz3ezQ&oe=69C6A6C0" class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img src="https://scontent.fixm4-4.fna.fbcdn.net/v/t1.6435-9/51491118_1635592166584909_8639579131131985920_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=0327a3&_nc_ohc=BzcxXL1QYtIQ7kNvwHtmSzO&_nc_oc=AdonYacAmVOXhSOfmzEs3gAtzRdn2iydwKbMYmnOe0RHdfgZPc36K8giX1c5vcGac-bI9XsrRs4Jg57_Ey4xTUSw&_nc_zt=23&_nc_ht=scontent.fixm4-4.fna&_nc_gid=z_im7VC8aGmLupaadv2tKw&_nc_ss=7a30f&oh=00_AfzsJCJP3zGNzHWzuQDDXYPgRIwHpi6CHIPY_rf9xnLD1g&oe=69E86703" class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img src="https://scontent.fixm4-1.fna.fbcdn.net/v/t39.30808-6/476633215_3708478729296232_1533335770771745628_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=7b2446&_nc_ohc=_dgx6mODd1IQ7kNvwH_rQ8x&_nc_oc=Adp9SiHx-3ewMwLxS0SEkAzi9ez3gur8jj5GcQJuCN0IYgFdiV4RgoNdvvVU2VnS_e74A0Q2KC3PmlVzL4yQ3XPP&_nc_zt=23&_nc_ht=scontent.fixm4-1.fna&_nc_gid=G1bA5xBE1x5BKevMJO08ug&_nc_ss=7a30f&oh=00_Afw_dsbnVEMgOrFqTt-0QZ51KyWutL4ARRrZgcZDqzQ-Xw&oe=69C6A792" class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img src="https://scontent.fixm4-4.fna.fbcdn.net/v/t39.30808-6/474968302_3694955053981933_8304679423193291137_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=7b2446&_nc_ohc=9GNnWfpohPYQ7kNvwGhnIwf&_nc_oc=AdpzFVgM9G5_-2xjRf1mkb7BSIqbXcEYq4yrPHJJ6-X7aQrGiyjJSqYqb7O_8oWm2AdUA8RVdZhdY3ZwfRkJeBbM&_nc_zt=23&_nc_ht=scontent.fixm4-4.fna&_nc_gid=yz4qEgqf844vFCZwwmMiBQ&_nc_ss=7a30f&oh=00_Afx-Oyb9zQjshtTpZGGo1yFNw4IBCYn1jJeeel9vJdmXTg&oe=69C6B827" class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img src="https://scontent.fixm4-3.fna.fbcdn.net/v/t39.30808-6/476634727_3708478795962892_1667089446093541914_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=7b2446&_nc_ohc=EI4ayUCVcAsQ7kNvwHIj_6h&_nc_oc=AdrEVMhi9aqyGAwPo90i9yAifvTFQbdWIo1R_7ACDj8FwAODChJvlzGufv7ZdUzKNfqRiSViHjEezc4tW_r2FbJi&_nc_zt=23&_nc_ht=scontent.fixm4-3.fna&_nc_gid=6YYmdMjqrPIFKpiZxusdLA&_nc_ss=7a30f&oh=00_AfxKIYji3BdLG_IPeTZjpuZZCoA7CRV6sRqtK0P58b_K3g&oe=69C692B6" class="gallery-img">    </div>    <div class="col-6 col-md-4">      <img src="https://scontent.fixm4-3.fna.fbcdn.net/v/t39.30808-6/477785117_3708478445962927_7426267486102862705_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7b2446&_nc_ohc=9JRzNnjfgsQQ7kNvwGrkFE-&_nc_oc=AdrK6cCSgVi2zj08ztNJmY9TszcYXWQLLgJJiLGxaGINJ26mzpFiFs-QV46RwXwcngeXm7aR6HgUg_7mjmSs1Jz7&_nc_zt=23&_nc_ht=scontent.fixm4-3.fna&_nc_gid=T_9y6Iq1vndX-TtmJ5c5yg&_nc_ss=7a30f&oh=00_Afx0L2kCihWoW5r6gZCD5Ls_PKOLefbshWipUAYgoi_eMA&oe=69C6BD3F" class="gallery-img">    </div>
+  </div>
+</section><!--  -->
+<div class="row mt-4 g-4">
+<div class="col-md-3"><div class="collection-box">Gold Necklaces</div></div><div class="col-md-3"><div class="collection-box">Bridal Jewellery</div></div><div class="col-md-3"><div class="collection-box">Bangles & Chains</div></div><div class="col-md-3"><div class="collection-box">Temple Jewellery</div></div>
+<div class="col-md-3"><div class="collection-box">Silver Articles</div></div><div class="col-md-3"><div class="collection-box">Diamond Jewellery</div></div><div class="col-md-3"><div class="collection-box">Custom Designs</div></div><div class="col-md-3"><div class="collection-box">Antique Collections</div></div>
+</div></div></section>
+<!-- OFFER --><section class="highlight text-center"><div class="container">
+<h2>Festive Offer</h2><p>Special Discounts on Making Charges</p><p><strong>Limited Time Offer</strong></p>
+</div></section>
+<!-- SERVICES --><section id="services"><div class="container">
+<h2 class="text-center">Our Services</h2>
+<div class="row mt-4">
+<div class="col-md-6"><ul><li>Hallmarked Gold Jewellery</li><li>Custom Jewellery Design</li><li>Old Gold Exchange</li><li>Jewellery Repair & Polishing</li></ul></div>
+<div class="col-md-6"><ul><li>Bridal Jewellery Consultation</li><li>Silver & Gift Articles</li><li>EMI / Easy Payment Options</li><li>Certified Quality Assurance</li></ul></div>
+</div></div></section>
+<!-- WHY US --><section id="why" class="bg-light"><div class="container">
+<h2 class="text-center">Why Choose Us</h2>
+<div class="row mt-4">
+<div class="col-md-4"><div class="why-box">60+ Years of Trust</div></div><div class="col-md-4"><div class="why-box">Premium Craftsmanship</div></div><div class="col-md-4"><div class="why-box">Customer Satisfaction</div></div><div class="col-md-4"><div class="why-box">Hallmarked Jewellery</div></div><div class="col-md-4"><div class="why-box">Wide Variety</div></div><div class="col-md-4"><div class="why-box">Prime Location</div></div>
+</div></div></section>
+<section class="py-5 text-center"><div class="container">
+<h2>Customer Testimonials</h2>
+<div id="testimonialCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+<div class="carousel-inner">
+<div class="carousel-item active"><div class="card p-4 mx-auto" style="max-width:600px;"><p>“Beautiful designs and very trustworthy shop. Highly recommended!”</p><h5 class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h5><p>- Lakshmi</p></div></div>
+<div class="carousel-item"><div class="card p-4 mx-auto" style="max-width:600px;"><p>“Excellent gold quality and friendly service.”</p><h5 class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h5><p>- Ramesh</p></div></div>
+<div class="carousel-item"><div class="card p-4 mx-auto" style="max-width:600px;"><p>“Best place in Kanchipuram for bridal jewellery.”</p><h5 class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></h5><p>- Priya</p></div></div>
+</div></div></div></section>
+<!-- CONTACT --><section id="contact" class="text-center"><div class="container">
+<h2>Visit Our Store</h2>
+<p>No 77AB, Near New Railway Station,<br>Jawaharlal Street, Big Kanchipuram - 631502</p>
+<p><strong>GSTIN:</strong> 33AAPFS0212D1ZQ</p>
+<p><strong>Since:</strong> 1960</p>
+</div></section>
+<!-- google map --><section class="py-5 bg-light text-center"><div class="container">
+<h2>Find Us</h2>
+<iframe   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.252848312899!2d79.7033648!3d12.8426279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52c3657fa9ae81%3A0x33959a667e978e7d!2sSri%20Dhanalakshmi%20Jewellers!5e0!3m2!1sen!2sin!4v1697834000000!5m2!1sen!2sin"   width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<h3 class="mt-4">Google Reviews</h3><p>Rated 4.8 by our happy customers</p>
+<section class="py-5 text-center bg-light">  <div class="container">    <h2 class="text-warning mb-4">Our Certificate</h2>    <p class="mb-4">Trusted for quality and authenticity</p>
+    <div class="certificate-box">      <img src="https://content.jdmagicbox.com/el_awards/33yrkundmb-9999pmulchnstd1503874.jpg?impolicy=queryparam&im=FitAndFill=(1400,1000)&v=1" class="certificate-img" width="1183" height="845">    </div>  </div></section>
+</div></section>
+<!-- whatsapp --><a href="https://wa.me/917339392916" target="_blank" class="btn btn-success btn-lg shadow"style="position:fixed;bottom:20px;right:20px;border-radius:50px;"><i class="bi bi-whatsapp"></i></a>
+<!-- FOOTER --><footer class="text-center p-4"><p>© 2026 Sri Dhanalakshmi Jewellers</p></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="pt-5 pb-3 text-white"><div class="container">
+<div class="row">
+<div class="col-md-4 mb-3"><h5 class="text-warning"><i class="bi bi-gem"></i> Sri Dhanalakshmi Jewellers</h5><p>Since 1960, delivering trust, purity, and elegant jewellery in Kanchipuram.</p></div>
+<div class="col-md-4 mb-3"><h5 class="text-warning">Quick Links</h5><ul class="list-unstyled"><li><a href="#about" class="text-white text-decoration-none">About</a></li><li><a href="#collections" class="text-white text-decoration-none">Collections</a></li><li><a href="#services" class="text-white text-decoration-none">Services</a></li><li><a href="#contact" class="text-white text-decoration-none">Contact</a></li></ul></div>
+<div class="col-md-4 mb-3"><h5 class="text-warning">Contact</h5><p>No 77AB, Near New Railway Station<br>Kanchipuram</p><p><i class="bi bi-telephone"></i> 7339392916</p></div>
+</div>
+<hr style="border-color: rgba(255,255,255,0.2);">
+<div class="text-center"><p class="mb-0">© 2026 Sri Dhanalakshmi Jewellers</p></div>
+</div></footer>
+</body></html>
 
-</html>
+
+
+
+
+
+
+
+
+
