@@ -326,100 +326,52 @@ body {
   </div>
 </section>
     <!-- CONTACT -->
-    <!-- <section id="contact" class="text-center">
+    <section id="contact" class="text-center">
         <div class="container">
             <h2>Visit Our Store</h2>
             <p>No 77AB, Near New Railway Station,<br>Jawaharlal Street, Big Kanchipuram - 631502</p>
             <p><strong>GSTIN:</strong> 33AAPFS0212D1ZQ</p>
             <p><strong>Since:</strong> 1960</p>
         </div>
-    </section> -->
-    <section id="contact" class="py-5 text-center bg-light">
+    </section>
+
+    <!--  -->
+<section id="contact" class="py-5 bg-light">
   <div class="container">
 
-    <h2 class="mb-3">Contact Us</h2>
-    <p class="mb-4">
-      Visit us or send a message — we’ll respond quickly.
-    </p>
-
-    <!-- Address Block -->
-    <div class="mb-4">
-      <p class="mb-1"><strong>Address:</strong></p>
-      <p>
-        No 77AB, Near New Railway Station,<br>
-        Jawaharlal Street, Big Kanchipuram - 631502
-      </p>
-      <p><strong>GSTIN:</strong> 33AAPFS0212D1ZQ</p>
-      <p><strong>Since:</strong> 1960</p>
+    <!-- Heading -->
+    <div class="text-center mb-4">
+      <h2>Contact Us</h2>
+      <p class="text-muted">Send us a message and we will respond soon</p>
     </div>
 
-    <!-- Contact Form -->
+    <!-- Form Center -->
     <div class="row justify-content-center">
-      <div class="col-12 col-md-8 col-lg-6">
+      <div class="col-12 col-md-8 col-lg-5">
 
-        <form name="contact"
-              method="POST"
-              data-netlify="true"
-              data-netlify-recaptcha="true"
-              netlify-honeypot="bot-field">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4">
+            <form name="contact" netlify>
+            <p>
+                <label>Name <input type="text" name="name" /></label>
+            </p>
+            <p>
+                <label>Email <input type="email" name="email" /></label>
+            </p>
+            <p>
+                <button type="submit">Send</button>
+            </p>
+            </form>
 
-          <!-- Honeypot field (hidden from users) -->
-          <p class="d-none">
-            <label>
-              Don’t fill this out if you’re human:
-              <input name="bot-field" />
-            </label>
-          </p>
-
-          <!-- Required Netlify hidden input -->
-          <input type="hidden" name="form-name" value="contact" />
-
-          <!-- Name -->
-          <div class="mb-3 text-start">
-            <label class="form-label">Name</label>
-            <input type="text" name="name"
-                   class="form-control"
-                   placeholder="Your Name"
-                   required>
           </div>
-
-          <!-- Email -->
-          <div class="mb-3 text-start">
-            <label class="form-label">Email</label>
-            <input type="email" name="email"
-                   class="form-control"
-                   placeholder="Your Email"
-                   required>
-          </div>
-
-          <!-- Message -->
-          <div class="mb-3 text-start">
-            <label class="form-label">Message</label>
-            <textarea name="message"
-                      class="form-control"
-                      rows="4"
-                      placeholder="Write your message..."
-                      required></textarea>
-          </div>
-
-          <!-- reCAPTCHA -->
-          <div class="mb-3 d-flex justify-content-center">
-            <div data-netlify-recaptcha="true"></div>
-          </div>
-
-          <!-- Submit Button -->
-          <button type="submit"
-                  class="btn btn-primary w-100">
-            Send Message
-          </button>
-
-        </form>
+        </div>
 
       </div>
     </div>
 
   </div>
 </section>
+
 
     <!-- google map -->
     <section class="py-5 bg-light text-center">
