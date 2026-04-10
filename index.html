@@ -10,309 +10,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <style>
-
-/* =========================
-   GLOBAL CSS
+<style>
+    /* =========================
+   Moved to Style.css
 ========================= */
 body {
     font-family: 'Poppins', sans-serif;
     background: #fffaf5;
     color: #2c2c2c;
-}
-
-section {
-    padding: 60px 0;
-}
-
-img {
-    transition: 0.3s;
-}
-
-img:hover {
-    transform: scale(1.05);
-}
-
-
-/* =========================
-   NAVBAR
-========================= */
-
-/* GOLD NAVBAR */
-.navbar {
-    background: linear-gradient(90deg, #5a0f1c, #8b1e2d);
-}
-
-/* BRAND */
-.navbar-brand {
-    color: gold !important;
-    font-size: 1.2rem;
-}
-
-/* BRAND TEXT (ellipsis fix) */
-.brand-text {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; /* prevents breaking */
-    font-size: 20px;
-}
-
-/* LINKS */
-.navbar .nav-link {
-    color: #fff !important;
-    margin-left: 10px;
-    transition: 0.3s;
-}
-
-.navbar .nav-link:hover {
-    color: gold !important;
-}
-
-/* TOGGLER FIX */
-.navbar-toggler {
-    border: 1px solid rgba(255, 255, 255, 0.6);
-}
-
-/* .navbar-toggler-icon {
-    filter: invert(1);
-} */
-
-/* PURE WHITE ICON */
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-
-/* =========================
-   HERO / CAROUSEL
-========================= */
-
-/* HERO CONTAINER */
-.hero {
-    margin-top: 70px; /* adjust for fixed navbar */
-}
-
-/* OLD HERO IMAGE RULE (kept) */
-.hero img {
-    height: 700px;
-    object-fit: cover;
-    filter: brightness(60%);
-}
-
-/* CAROUSEL HEIGHT CONTROL */
-.hero .carousel-item {
-    height: 60vh;          /* desktop height */
-    max-height: 500px;     /* cap like Amazon */
-    transition: transform 0.6s ease;
-}
-
-/* IMAGE FIT */
-.hero .carousel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;     /* crop like Amazon */
-}
-
-/* OVERLAY */
-.hero .carousel-item::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-}
-
-/* CAPTION */
-.carousel-caption {
-    bottom: 20%;
-}
-
-.carousel-caption h1 {
-    font-size: 2.8rem;
-    color: #ffd700;
-}
-
-.carousel-caption p {
-    font-size: 1.2rem;
-}
-
-
-/* =========================
-   BUTTONS
-========================= */
-.btn-gold {
-    background: linear-gradient(45deg, #d4af37, #ffd700);
-    border: none;
-    color: #000;
-    font-weight: 600;
-}
-
-
-/* =========================
-   CARDS / BOXES
-========================= */
-
-/* CARDS */
-.card {
-    border: none;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-}
-
-/* COLLECTION BOX */
-.collection-box {
-    background: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    font-weight: 500;
-}
-
-/* WHY US */
-.why-box {
-    background: #fff;
-    padding: 20px;
-    border-left: 4px solid #d4af37;
-}
-
-/* HIGHLIGHT */
-.highlight {
-    background: linear-gradient(135deg, #8b1e2d, #d4af37);
-    color: #fff;
-}
-
-
-/* =========================
-   GALLERY
-========================= */
-.gallery-img {
-    width: 100%;
-    height: 250px; /* Fixed height for all images */
-    object-fit: cover; /* Full div, no distortion */
-    border-radius: 12px;
-    transition: 0.3s;
-}
-
-.gallery-img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
-}
-
-
-/* =========================
-   CERTIFICATE
-========================= */
-.certificate-box {
-    max-width: 700px;
-    margin: auto;
-    padding: 15px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.certificate-img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    cursor: zoom-in;
-    transition: 0.3s;
-}
-
-.certificate-img:hover {
-    transform: scale(1.03);
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-footer {
-    background: #3b0a14;
-    color: #fff;
-}
-
-footer {
-    background: linear-gradient(135deg, #3b0a14, #8b1e2d);
-}
-
-footer h5 {
-    font-weight: 600;
-}
-
-footer a:hover {
-    color: gold !important;
-}
-
-
-/* =========================
-   UTILITIES
-========================= */
-.text-warning i {
-    color: gold;
-}
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-/* Mobile fixes */
-@media (max-width: 576px) {
-
-    .brand-text {
-        font-size: 24px;  /* font-size: 14px; dont use too big*/
-        /* color: white; */
-    }
-
-    .navbar-brand img {
-        width: 36px;
-        height: 36px;
-    }
-
-    .navbar-toggler {
-        padding: 4px 6px; /* smaller button */
-    }
-
-    .carousel-caption h1 {
-        font-size: 1.2rem;
-    }
-
-    .carousel-caption p {
-        font-size: 0.9rem;
-    }
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-
-    .gallery-img {
-        height: 180px;
-    }
-
-    .hero .carousel-item {
-        height: 35vh;
-        max-height: 250px;
-    }
-}
-.hero img {
-    filter: brightness(90%) contrast(105%);
-}
-.accordion-button {
-    font-weight: 600;
-}
-
-.accordion-button:not(.collapsed) {
-    background: #fff3cd;
-    color: #000;
-}
-
-.rate-bar {
-    background: #ffd700;
-    color: #000;
-    font-weight: 600;
-    position: relative;
-    z-index: 999;
-    margin-top: 80px;
-    font-size: 0.8rem;
 }
 
 </style>
@@ -620,14 +325,101 @@ footer a:hover {
   </div>
 </section>
     <!-- CONTACT -->
-    <section id="contact" class="text-center">
+    <!-- <section id="contact" class="text-center">
         <div class="container">
             <h2>Visit Our Store</h2>
             <p>No 77AB, Near New Railway Station,<br>Jawaharlal Street, Big Kanchipuram - 631502</p>
             <p><strong>GSTIN:</strong> 33AAPFS0212D1ZQ</p>
             <p><strong>Since:</strong> 1960</p>
         </div>
-    </section>
+    </section> -->
+    <section id="contact" class="py-5 text-center bg-light">
+  <div class="container">
+
+    <h2 class="mb-3">Contact Us</h2>
+    <p class="mb-4">
+      Visit us or send a message — we’ll respond quickly.
+    </p>
+
+    <!-- Address Block -->
+    <div class="mb-4">
+      <p class="mb-1"><strong>Address:</strong></p>
+      <p>
+        No 77AB, Near New Railway Station,<br>
+        Jawaharlal Street, Big Kanchipuram - 631502
+      </p>
+      <p><strong>GSTIN:</strong> 33AAPFS0212D1ZQ</p>
+      <p><strong>Since:</strong> 1960</p>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+
+        <form name="contact"
+              method="POST"
+              data-netlify="true"
+              data-netlify-recaptcha="true"
+              netlify-honeypot="bot-field">
+
+          <!-- Honeypot field (hidden from users) -->
+          <p class="d-none">
+            <label>
+              Don’t fill this out if you’re human:
+              <input name="bot-field" />
+            </label>
+          </p>
+
+          <!-- Required Netlify hidden input -->
+          <input type="hidden" name="form-name" value="contact" />
+
+          <!-- Name -->
+          <div class="mb-3 text-start">
+            <label class="form-label">Name</label>
+            <input type="text" name="name"
+                   class="form-control"
+                   placeholder="Your Name"
+                   required>
+          </div>
+
+          <!-- Email -->
+          <div class="mb-3 text-start">
+            <label class="form-label">Email</label>
+            <input type="email" name="email"
+                   class="form-control"
+                   placeholder="Your Email"
+                   required>
+          </div>
+
+          <!-- Message -->
+          <div class="mb-3 text-start">
+            <label class="form-label">Message</label>
+            <textarea name="message"
+                      class="form-control"
+                      rows="4"
+                      placeholder="Write your message..."
+                      required></textarea>
+          </div>
+
+          <!-- reCAPTCHA -->
+          <div class="mb-3 d-flex justify-content-center">
+            <div data-netlify-recaptcha="true"></div>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit"
+                  class="btn btn-primary w-100">
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
     <!-- google map -->
     <section class="py-5 bg-light text-center">
         <div class="container">
