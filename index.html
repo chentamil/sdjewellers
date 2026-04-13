@@ -52,14 +52,40 @@ body {
         </div>
     </nav>
 <!--  -->
-<div class="rate-bar">
+
+<!-- <div class="rate-bar">
   <marquee scrollamount="8" behavior="scroll" direction="right">
     💰 Gold: ₹6,500/g * 🥈 Silver: ₹75/g *  📅 Updated: 29-03-2026 *
   </marquee>
-</div>
+</div> -->
+
+    <!-- gold rate Json start -->
+        <div class="rate-bar">
+        <marquee scrollamount="8" behavior="scroll" direction="right">
+            💰 Gold: ₹<span id="gold-rate"></span>/g * 🥈 Silver: ₹<span id="silver-rate"></span>/g *  📅 Updated: <span id="last-updated"></span> *
+        </marquee>
+        </div>
+
+        <script>
+        // Replace with the raw GitHub URL for the JSON file or Google Drive link
+        // URL to your JSON file hosted via JSDelivr CDN
+        const jsonUrl = 'https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/rate.json';
+
+        fetch(jsonUrl)
+            .then(response => response.json())
+            .then(data => {
+            document.getElementById('gold-rate').innerText = data.gold_rate;
+            document.getElementById('silver-rate').innerText = data.silver_rate;
+            document.getElementById('last-updated').innerText = data.last_updated;
+            })
+            .catch(error => {
+            console.error('Error fetching data:', error);
+            });
+        </script>
+    <!-- gold rate Json end -->
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero m-1">
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active"><img
