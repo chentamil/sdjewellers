@@ -298,5 +298,6 @@ footer a:hover {
     position: relative;
     z-index: 999;
     margin-top: 80px;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
+    display: flex;
 }
