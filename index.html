@@ -30,7 +30,7 @@ body {
         <div class="container">
             <a class="navbar-brand fw-bold"><img data-visualcompletion="media-vc-image"
                     style="width: 48px;height: 48px; object-fit: contain;border-radius: 4px;"
-                    src="https://scontent.fmaa16-2.fna.fbcdn.net/v/t39.30808-1/244976666_2635125379964911_6034327754134170789_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=h67eujq9JdAQ7kNvwHiqufz&_nc_oc=AdqiRmwUvnQpuYp3BwdFSGYO4irInSlKQuoNZWaDPFm9U4gAKTuT9wgOvFZjXM2mqWo&_nc_zt=24&_nc_ht=scontent.fmaa16-2.fna&_nc_gid=DP9AO25Udx9kOivqBvORIw&_nc_ss=7a30f&oh=00_AfzMIUXWz_DMafjbslPMziKOUb5QZ6ntIrmH1dkJ6iXZfg&oe=69CE755F">
+                    src="/images/sdj-logo.jpg">
                         <span class="brand-text ms-2 d-none d-sm-inline">
                             Sri Dhanalakshmi Jewellers
                         </span>
@@ -359,10 +359,18 @@ body {
           <div class="card-body p-4">
 
             <!-- Netlify Form -->
-            <form name="contact" method="POST" netlify>
+            <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
               
               <!-- REQUIRED for Netlify -->
               <input type="hidden" name="form-name" value="contact">
+
+              <!-- Honeypot (hidden field for bots) -->
+              <div style="display:none;">
+                <label>
+                  Don’t fill this out if you're human:
+                  <input name="bot-field" type="text">
+                </label>
+              </div>
 
               <div class="row g-3">
 
