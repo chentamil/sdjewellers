@@ -8,8 +8,9 @@ async function loadComponent(id, file) {
   }
 }
 
-// Load header & footer everywhere
 document.addEventListener("DOMContentLoaded", () => {
-  loadComponent("header", "/components/header.html");
-  loadComponent("footer", "/components/footer.html");
+  const base = "https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main";
+
+  loadComponent("header", base + "/components/header.html");
+  loadComponent("footer", base + "/components/footer.html");
 });
