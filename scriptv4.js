@@ -35,6 +35,3 @@ function loadScript(src) {
     document.body.appendChild(s);
   });
 }
-/* =========================
-   🔥 FIX SECTION (ADDED ONLY)
-   ========================= */
