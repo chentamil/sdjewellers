@@ -1,16 +1,16 @@
 async function loadComponent(id, file) {
-  try {
-    const res = await fetch(file);
-    const html = await res.text();
-    document.getElementById(id).innerHTML = html;
-  } catch (err) {
-    console.error("Error loading component:", file, err);
-  }
+  const res = await fetch(file);
+  const html = await res.text();
+  document.getElementById(id).innerHTML = html;
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const base = "https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main";
+// load everything first
+document.addEventListener("DOMContentLoaded", async () => {
+  await loadComponent("header", "/components/header.html");
+  await loadComponent("footer", "/components/footer.html");
 
-  loadComponent("header", base + "/components/header.html");
-  loadComponent("footer", base + "/components/footer.html");
+  // NOW load rates AFTER DOM exists
+  const script = document.createElement("script");
+  script.src = "https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/js/rates.js";
+  document.body.appendChild(script);
 });
