@@ -39,22 +39,29 @@
         //         console.error('Error fetching data:', error);
         //     });
 
-        document.addEventListener("DOMContentLoaded", () => {
-        const jsonUrl = "https://opensheet.elk.sh/1PmqYry7OrIzqm9I0cR7rmcyXspDmmDQhjMkqKwXw59o/Sheet1";
+function loadRates() {
+  console.log("Loading rates...");
 
-        fetch(jsonUrl)
-        .then(res => res.json())
-        .then(data => {
-        const rates = data[0];
+  fetch(
+    "https://opensheet.elk.sh/1PmqYry7OrIzqm9I0cR7rmcyXspDmmDQhjMkqKwXw59o/Sheet1"
+  )
+    .then((r) => r.json())
+    .then((data) => {
+      console.log("Rates data:", data);
 
-        const gold = document.getElementById("gold-rate");
-        const silver = document.getElementById("silver-rate");
-        const updated = document.getElementById("last-updated");
+      const rates = data[0];
 
-        if (gold) gold.innerText = rates.gold_rate;
-        if (silver) silver.innerText = rates.silver_rate;
-        if (updated) updated.innerText = rates.last_updated;
-        });
-        });
+      const gold = document.getElementById("gold-rate");
+      const silver = document.getElementById("silver-rate");
+      const updated = document.getElementById("last-updated");
+
+      console.log("Elements:", { gold, silver, updated });
+
+      if (gold) gold.innerText = rates.gold_rate;
+      if (silver) silver.innerText = rates.silver_rate;
+      if (updated) updated.innerText = rates.last_updated;
+    })
+    .catch((err) => console.error("Rate error:", err));
+}
         </script>
     <!-- gold rate Json end -->
