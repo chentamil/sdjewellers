@@ -1,13 +1,3 @@
- <!-- gold rate Json start -->
-        <div class="rate-bar">
-        <marquee scrollamount="8" behavior="scroll" direction="right">
-            💰 <span class="me-4">Gold: ₹<span id="gold-rate"></span>/g</span> 
-            🥈 <span class="me-4">Silver: ₹<span id="silver-rate"></span>/g</span>
-            📅 <span class="me-4">Updated: <span id="last-updated"></span></span>
-        </marquee>
-        </div>
-
-       <script>
             // // Replace with the raw GitHub URL for the JSON file or Google Drive link
             // // URL to your JSON file hosted via JSDelivr CDN
             // const jsonUrl = 'https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/rate.json';
@@ -63,5 +53,4 @@ function loadRates() {
     })
     .catch((err) => console.error("Rate error:", err));
 }
-        </script>
-    <!-- gold rate Json end -->
+
