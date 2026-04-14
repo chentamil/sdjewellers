@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // 2. THEN load JS (IMPORTANT)
   loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js");
 
-  loadScript(base + "/js/rates.js");
+  loadScript(base + "/js/rate.js");
 });
 
 // helper
