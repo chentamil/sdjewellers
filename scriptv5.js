@@ -4,8 +4,8 @@ async function loadComponent(id, file) {
   document.getElementById(id).innerHTML = html;
 }
 document.addEventListener("DOMContentLoaded", async () => {
-  //const base = "https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main";
- const base = "https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@195a8b2729ab3da9fcaabe536d80fda8805382f2";
+  const base = "https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main";
+ //const base = "https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@195a8b2729ab3da9fcaabe536d80fda8805382f2";
 
   // 1. Load header & footer
   await loadComponent("header", base + "/components/header.html");
