@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js");
 
   // 3. Load rate.js properly
-  await loadScript(base + "/js/rate.js");
+  await loadScript(base + "/js/ratev1.js");
 
   // 4. Call function AFTER everything is ready
   if (typeof loadRates === "function") {
