@@ -71,22 +71,38 @@ body {
         </div>
 
        <script>
-        // Replace with the raw GitHub URL for the JSON file or Google Drive link
-        // URL to your JSON file hosted via JSDelivr CDN
-        const jsonUrl = 'https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/rate.json';
+            // // Replace with the raw GitHub URL for the JSON file or Google Drive link
+            // // URL to your JSON file hosted via JSDelivr CDN
+            // const jsonUrl = 'https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/rate.json';
 
-        fetch(jsonUrl)
+            // fetch(jsonUrl)
+            //     .then(response => response.json())
+            //     .then(data => {
+            //     document.getElementById('gold-rate').innerText = data.gold_rate;
+            //     document.getElementById('silver-rate').innerText = data.silver_rate;
+            //     document.getElementById('last-updated').innerText = data.last_updated;
+            //     })
+            //     .catch(error => {
+            //     console.error('Error fetching data:', error);
+            //     });
+
+                
+            // https://docs.google.com/spreadsheets/d/1PmqYry7OrIzqm9I0cR7rmcyXspDmmDQhjMkqKwXw59o/edit?gid=0#gid=0
+            const jsonUrl = 'https://opensheet.elk.sh/1PmqYry7OrIzqm9I0cR7rmcyXspDmmDQhjMkqKwXw59o/Sheet1';
+            fetch(jsonUrl)
             .then(response => response.json())
             .then(data => {
-            document.getElementById('gold-rate').innerText = data.gold_rate;
-            document.getElementById('silver-rate').innerText = data.silver_rate;
-            document.getElementById('last-updated').innerText = data.last_updated;
+                const rates = data[0];
+
+                document.getElementById('gold-rate').innerText = rates.gold_rate;
+                document.getElementById('silver-rate').innerText = rates.silver_rate;
+                document.getElementById('last-updated').innerText = rates.last_updated;
             })
             .catch(error => {
-            console.error('Error fetching data:', error);
+                console.error('Error fetching data:', error);
             });
         </script>
-<!-- gold rate Json end -->
+    <!-- gold rate Json end -->
 
     <!-- HERO -->
     <section class="hero m-1">
@@ -471,18 +487,17 @@ body {
     </section>
     <!-- whatsapp --><a href="https://wa.me/917339392916" target="_blank" class="btn btn-success btn-lg shadow"
         style="position:fixed;bottom:20px;right:20px;border-radius:50px;"><i class="bi bi-whatsapp"></i></a>
- <!-- callnow --><a href="tel:7339392916"
-   class="btn btn-warning position-fixed bottom-0 start-0 m-3 d-md-none">
-   Call
-</a>
-    <!-- FOOTER -->
+ <!-- callnow -->
+  <a href="tel:7339392916" class="btn btn-warning position-fixed bottom-0 start-0 m-3 d-md-none"><i class="bi bi-telephone-fill"></i></a>
+
+  <!-- FOOTER -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-<footer class="pt-5 pb-3 text-white">
+<footer class="pt-5 pb-3 text-white fw-light">
     <div class="container">
         <div class="row">
             <div class="col-md-3 mb-3">
                 <h5 class="text-warning"><i class="bi bi-gem"></i> Sri Dhanalakshmi Jewellers</h5>
-                <p>Since 1960, delivering trust, purity, and elegant jewellery in Kanchipuram.</p>
+                <p class="text-secondary">Since 1960, delivering trust, purity, and elegant jewellery in Kanchipuram.</p>
             </div>
             <div class="col-md-3 mb-3">
                 <h5 class="text-warning">Quick Links</h5>
@@ -496,7 +511,7 @@ body {
             <div class="col-md-3 mb-3">
                 <h5 class="text-warning">Contact</h5>
                 <p>No 77AB, Near New Railway Station<br>Kanchipuram</p>
-                <p><i class="bi bi-telephone"></i> 7339392916</p>
+                <p><i class="bi bi-telephone"></i> <a href="tel:+917339392916" class="ms-2 text-decoration-none text-light">+91 73393 92916</a></p>
             </div>
             <div class="col-md-3 mb-3">
                 <h5 class="text-warning">Policies</h5>
@@ -533,5 +548,4 @@ body {
 </body>
 
 </html>
-
 

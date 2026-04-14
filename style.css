@@ -26,7 +26,9 @@ img:hover {
 
 /* GOLD NAVBAR */
 .navbar {
-    background: linear-gradient(90deg, #5a0f1c, #8b1e2d);
+    /* background: linear-gradient(90deg, #5a0f1c, #8b1e2d); */
+    background: linear-gradient(90deg, #2c0a0f, #6e1b25);
+    /* background: #09101f; */
 }
 
 /* BRAND */
@@ -212,12 +214,9 @@ img:hover {
    FOOTER
 ========================= */
 footer {
-    background: #3b0a14;
+    /* background: linear-gradient(135deg, #3b0a14, #8b1e2d); */
+    background: #09101f;
     color: #fff;
-}
-
-footer {
-    background: linear-gradient(135deg, #3b0a14, #8b1e2d);
 }
 
 footer h5 {
