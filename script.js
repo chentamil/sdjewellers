@@ -4,13 +4,23 @@ async function loadComponent(id, file) {
   document.getElementById(id).innerHTML = html;
 }
 
-// load everything first
 document.addEventListener("DOMContentLoaded", async () => {
-  await loadComponent("header", "/components/header.html");
-  await loadComponent("footer", "/components/footer.html");
+  const base = "https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main";
 
-  // NOW load rates AFTER DOM exists
-  const script = document.createElement("script");
-  script.src = "https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/js/rates.js";
-  document.body.appendChild(script);
+  // 1. Load HTML first
+  await loadComponent("header", base + "/components/header.html");
+  await loadComponent("footer", base + "/components/footer.html");
+
+  // 2. THEN load JS (IMPORTANT)
+  loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js");
+
+  loadScript(base + "/js/rates.js");
 });
+
+// helper
+function loadScript(src) {
+  const s = document.createElement("script");
+  s.src = src;
+  s.defer = true;
+  document.body.appendChild(s);
+}
