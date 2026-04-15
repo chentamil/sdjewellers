@@ -19,6 +19,7 @@ h2 {
     color: #fff !important;
     padding: 0 1rem;
     display: inline-block;
+    font-family: cursive;
 }
 
 section {
@@ -311,14 +312,25 @@ footer a:hover {
 }
 
 .rate-bar {
-    background: #ffd700;
-    color: #000;
-    font-weight: 600;
+background: #ffd700; */
+    /* color: #000; */
+    /* font-weight: 600; */
     position: relative;
     z-index: 999;
     margin-top: 80px;
-    font-size: 1.2rem;
-    display: flex;
+    /* font-size: 1.2rem; */
+    /* display: flex; */
+    background: linear-gradient(91.95deg, #b8292f -10%, #7c1a1f -9.98%, #b8292f 59.49%, #73171c 139.43%, #b8292f 139.44%);
+    /* border-radius: 25px; */
+    height: 36px;
+    line-height: 36px;
+    font-family: Figtree-Medium, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff !important;
+    padding: 0 1rem;
+    /* display: inline-block; */
+    background: #1d2a4d;
 }
 /* icons */
 .social-icons i {
