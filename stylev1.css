@@ -8,6 +8,19 @@ body {
     /* padding-top: 90px; */
 }
 
+h2 {
+    background: linear-gradient(91.95deg, #b8292f -10%, #7c1a1f -9.98%, #b8292f 59.49%, #73171c 139.43%, #b8292f 139.44%);
+    border-radius: 25px;
+    height: 36px;
+    line-height: 36px;
+    font-family: Figtree-Medium, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff !important;
+    padding: 0 1rem;
+    display: inline-block;
+}
+
 section {
     padding: 60px 0;
 }
@@ -149,10 +162,12 @@ img:hover {
 
 /* COLLECTION BOX */
 .collection-box {
-    background: #fff;
+    /* background: #fff; */
     padding: 25px;
     border-radius: 10px;
     font-weight: 500;
+    background: #1d2a4d;
+    color: #fff;
 }
 
 /* WHY US */
@@ -164,8 +179,12 @@ img:hover {
 
 /* HIGHLIGHT */
 .highlight {
-    background: linear-gradient(135deg, #8b1e2d, #d4af37);
-    color: #fff;
+    /* background: linear-gradient(135deg, #8b1e2d, #d4af37);
+    color: #fff; */
+    font-weight: 700;
+    font-size: 2rem;
+    background: #fff4d7;
+    color: #681016;
 }
 
 
