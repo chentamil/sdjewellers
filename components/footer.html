@@ -51,4 +51,59 @@
             <p class="mb-0">All rights reserved © 2026 Sri Dhanalakshmi Jewellers</p>
         </div>
     </div>
+
+<!--  -->
+<!-- BACK TO TOP BUTTON (Bootstrap Only) -->
+    <button id="backToTop" class="btn btn-primary shadow">
+    <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <style>
+    #backToTop {
+        position: fixed;
+        bottom: 90px; /* above WhatsApp button */
+        right: 20px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        z-index: 999;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        opacity: 0; /* hidden initially */
+        pointer-events: none; /* prevent click when hidden */
+        transition: opacity 0.4s ease; /* smooth fade */
+    }
+
+    #backToTop.show {
+        opacity: 1;
+        pointer-events: auto; /* enable click when shown */
+    }
+
+    #backToTop:hover {
+        background-color: #0b5ed7;
+        color: #fff;
+    }
+    </style>
+
+    <script>
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 3000) { // show after 3000px
+            backToTopBtn.classList.add("show");
+        } else {
+            backToTopBtn.classList.remove("show");
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+    </script>
 </footer>
