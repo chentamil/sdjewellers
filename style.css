@@ -341,3 +341,32 @@ background: #ffd700; */
     transform: scale(1.3);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.8));
 }
+
+/* back to top */
+    #backToTop {
+        position: fixed;
+        bottom: 90px; /* above WhatsApp button */
+        right: 20px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        z-index: 999;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        opacity: 0; /* hidden initially */
+        pointer-events: none; /* prevent click when hidden */
+        transition: opacity 0.4s ease; /* smooth fade */
+    }
+
+    #backToTop.show {
+        opacity: 1;
+        pointer-events: auto; /* enable click when shown */
+    }
+
+    #backToTop:hover {
+        background-color: #0b5ed7;
+        color: #fff;
+    }
