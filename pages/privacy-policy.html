@@ -1,12 +1,12 @@
-<head> 
-<!-- Favicon Link -->
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/images/sdj-logo.jpg" type="image/jpeg">
-</head>
+<html>
+<div id="head"></div>
 
-<div id="header"></div>
+<body>
+    <div id="header"></div>
 
 
-<!-- PAGE CONTENT -->
+
+    <!-- PAGE CONTENT -->
 <!-- Privacy Policy HTML for Sri Dhanalakshmi Jewellers -->
 
 <div class="p-2 container privacy-policy">
@@ -53,6 +53,20 @@
 </div>
 <!-- Privacy Policy HTML for Sri Dhanalakshmi Jewellers -->
 
-<div id="footer"></div>
 
-<script src="https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/script.js"></script>
+
+
+
+
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/components/script.js"></script>
+    <script>
+        fetch("https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/components/head.html")
+            .then(res => res.text())
+            .then(html => document.head.innerHTML = html);
+    </script>
+</body>
+
+</html>

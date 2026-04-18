@@ -1,24 +1,32 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <title>Page Not Found</title>
- <!-- Favicon Link -->
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/images/sdj-logo.jpg" type="image/jpeg">
-</head>
-
-<div id="header"></div>
-
-<!-- PAGE CONTENT -->
-<div class="container">
-	<h1>404 - Page Not Found</h1>
-  <p>Sorry, this page doesn’t exist.</p>
-  <a href="https://www.sridhanalakshmijewellers.com/">Go back home</a>
-</div>
+<div id="head"></div>
+<title>Page Not Found</title>
+<body>
+    <div id="header"></div>
 
 
-<div id="footer"></div>
 
-<script src="https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/script.js"></script>
+    <!-- PAGE CONTENT -->
+    <div class="container">
+        <h1>404 - Page Not Found</h1>
+        <p>Sorry, this page doesn’t exist.</p>
+        <a href="https://www.sridhanalakshmijewellers.com/">Go back home</a>
+    </div>
 
+
+
+
+
+
+
+    <div id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/components/script.js"></script>
+    <script>
+        fetch("https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/components/head.html")
+            .then(res => res.text())
+            .then(html => document.head.innerHTML = html);
+    </script>
+</body>
 
 </html>
