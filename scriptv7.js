@@ -36,7 +36,7 @@ function initCarousels() {
   const heroCarousel = document.querySelector('#carouselExample');
   if (heroCarousel) {
     new bootstrap.Carousel(heroCarousel, {
-      interval: 3000,
+      interval: 5000,
       ride: 'carousel'
     });
   }
@@ -44,7 +44,7 @@ function initCarousels() {
   const testimonialCarousel = document.querySelector('#testimonialCarousel');
   if (testimonialCarousel) {
     new bootstrap.Carousel(testimonialCarousel, {
-      interval: 4000,
+      interval: 7000,
       ride: 'carousel'
     });
   }
