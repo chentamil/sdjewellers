@@ -71,4 +71,5 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // 6. Initialize all carousels manually
   initCarousels();
+
 });
