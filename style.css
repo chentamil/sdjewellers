@@ -106,7 +106,7 @@ img:hover {
 .hero .carousel-item {
     height: 60vh;          /* desktop height */
     max-height: 500px;     /* cap like Amazon */
-    transition: transform 0.6s ease;
+    transition: transform 1.1s ease;
 }
 
 /* IMAGE FIT */
@@ -121,7 +121,7 @@ img:hover {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    background: linear-gradient(to top, rgba(0,0,0,0.1), transparent);
 }
 
 /* CAPTION */
@@ -138,7 +138,19 @@ img:hover {
     font-size: 1.2rem;
 }
 
+/*  Carousel HTML with Dots and Arrows */
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.8;
+}
 
+.carousel-indicators .active {
+    background-color: #f5c518; /* gold color example */
+    opacity: 1;
+}
 /* =========================
    BUTTONS
 ========================= */
@@ -300,7 +312,7 @@ footer a:hover {
     }
 }
 .hero img {
-    filter: brightness(90%) contrast(105%);
+    filter: brightness(105%) contrast(105%) saturate(110%);
 }
 .accordion-button {
     font-weight: 600;
@@ -370,3 +382,5 @@ background: #ffd700; */
         background-color: #0b5ed7;
         color: #fff;
     }
+
+
