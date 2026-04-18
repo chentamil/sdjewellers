@@ -30,14 +30,14 @@
         //     });
 
 function loadRates() {
-  console.log("Loading rates...");
+  // console.log("Loading rates...");
 
   fetch(
     "https://opensheet.elk.sh/1PmqYry7OrIzqm9I0cR7rmcyXspDmmDQhjMkqKwXw59o/Sheet1"
   )
     .then((r) => r.json())
     .then((data) => {
-      console.log("Rates data:", data);
+      // console.log("Rates data:", data);
 
       const rates = data[0];
 
@@ -45,7 +45,7 @@ function loadRates() {
       const silver = document.getElementById("silver-rate");
       const updated = document.getElementById("last-updated");
 
-      console.log("Elements:", { gold, silver, updated });
+      // console.log("Elements:", { gold, silver, updated });
 
       if (gold) gold.innerText = rates.gold_rate;
       if (silver) silver.innerText = rates.silver_rate;
