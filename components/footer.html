@@ -9,23 +9,29 @@
             <div class="col-md-3 mb-3">
                 <h5 class="text-warning">Quick Links</h5>
                 <ul class="list-unstyled">
-                    <li><a href="/sdjewellers/#about" class="text-white text-decoration-none">About</a></li>
-                    <li><a href="/sdjewellers/#collections" class="text-white text-decoration-none">Collections</a></li>
-                    <li><a href="/sdjewellers/#services" class="text-white text-decoration-none">Services</a></li>
-                    <li><a href="/sdjewellers/#contact" class="text-white text-decoration-none">Contact</a></li>
+                    <li><a href="/#about" class="text-white text-decoration-none">About</a></li>
+                    <li><a href="/#collections" class="text-white text-decoration-none">Collections</a></li>
+                    <li><a href="/#services" class="text-white text-decoration-none">Services</a></li>
+                    <li><a href="/#contact" class="text-white text-decoration-none">Contact</a></li>
                 </ul>
             </div>
             <div class="col-md-3 mb-3">
                 <h5 class="text-warning">Contact</h5>
-                <p>No 77AB, Near New Railway Station<br>Kanchipuram</p>
+                <a href="https://maps.google.com/?cid=3717046832465415805&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&amp;hl=en&amp;gl=IN&amp;source=embed" 
+   target="_blank" 
+   class="text-white text-decoration-none">
+  <p class="mb-0">No 77AB, Near New Railway Station<br>Kanchipuram <i class="bi bi-box-arrow-up-right ms-1"></i></p>
+</a>
+                <p><i class="bi bi-envelope"></i><a href="mailto:sdjkanchi2013@gmail.com" class="ms-2 text-decoration-none text-light">sdjkanchi2013@gmail.com</a></p>
+                <p><i class="bi bi-phone-flip"></i><a href="tel:+914427233017" class="ms-2 text-decoration-none text-light">044 2723 3017</a></p>
                 <p><i class="bi bi-telephone"></i> <a href="tel:+917339392916" class="ms-2 text-decoration-none text-light">+91 73393 92916</a></p>
             </div>
             <div class="col-md-3 mb-3">
                 <h5 class="text-warning">Policies</h5>
                 <ul class="list-unstyled">
-                    <li><a href="/sdjewellers/pages/terms-conditions.html" class="text-white text-decoration-none">Terms and Conditions</a></li>
-                    <li><a href="/sdjewellers/pages/privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
-                    <li><a href="/sdjewellers/pages/chit.html" class="text-white text-decoration-none">Chit</a></li>
+                    <li><a href="/pages/terms-conditions.html" class="text-white text-decoration-none">Terms and Conditions</a></li>
+                    <li><a href="/pages/privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="/pages/chit.html" class="text-white text-decoration-none">Chit</a></li>
                 </ul>
             </div>
         </div>
@@ -36,14 +42,14 @@
             <i class="bi bi-facebook fs-3 me-3" style="color:#1877F2; cursor:pointer;"
                 onclick="window.open('https://www.facebook.com/sdjjewellers','_blank')"></i>
 
-            <i class="bi bi-twitter fs-3 me-3" style="color:#1DA1F2; cursor:pointer;"
-                onclick="window.open('https://www.twitter.com/sdjjewellers','_blank')"></i>
-
             <i class="bi bi-instagram fs-3 me-3" style="color:#E1306C; cursor:pointer;"
-                onclick="window.open('https://www.instagram.com/sdjjewellers','_blank')"></i>
+                onclick="window.open('https://www.instagram.com/sridhanalakshmijewellers/','_blank')"></i>
 
             <i class="bi bi-youtube fs-3" style="color:#FF0000; cursor:pointer;"
-                onclick="window.open('https://www.youtube.com/@sdjjewellers','_blank')"></i>
+                onclick="window.open('https://www.youtube.com/@sridhanalakshmijewellers3090','_blank')"></i>
+
+            <!-- <i class="bi bi-twitter fs-3 me-3" style="color:#1DA1F2; cursor:pointer;"
+                onclick="window.open('https://www.twitter.com/sdjjewellers','_blank')"></i>     -->
         </div>
 
         <hr style="border-color: rgba(255,255,255,0.2);">
@@ -63,52 +69,4 @@
     <i class="bi bi-arrow-up"></i>
     </button>
 
-    <style>
-    #backToTop {
-        position: fixed;
-        bottom: 90px; /* above WhatsApp button */
-        right: 20px;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        z-index: 999;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        opacity: 0; /* hidden initially */
-        pointer-events: none; /* prevent click when hidden */
-        transition: opacity 0.4s ease; /* smooth fade */
-    }
-
-    #backToTop.show {
-        opacity: 1;
-        pointer-events: auto; /* enable click when shown */
-    }
-
-    #backToTop:hover {
-        background-color: #0b5ed7;
-        color: #fff;
-    }
-    </style>
-
-    <script>
-    const backToTopBtn = document.getElementById("backToTop");
-
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 3000) { // show after 3000px
-            backToTopBtn.classList.add("show");
-        } else {
-            backToTopBtn.classList.remove("show");
-        }
-    });
-
-    backToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
-        });
-    });
-    </script>
 </footer>
