@@ -20,26 +20,38 @@
 
 <html>
   <div id="head"></div>
-  <style>
-    /* Fullscreen spinner overlay */
-    #spinner-overlay {
-      position: fixed;
-      inset: 0;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-  </style> 
+<style>
+  /* Fullscreen logo overlay */
+  #spinner-overlay {
+    position: fixed;
+    inset: 0;
+    background: #fff; /* solid background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  /* Optional: logo size */
+  #spinner-logo {
+    width: 150px;
+    height: auto;
+animation: spin 0.5s linear infinite; /* spin animation */
+  }
+
+  /* Keyframes for clockwise rotation */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+
  <body>
   <!-- Loader placeholder -->
-      <!-- Spinner overlay -->
-  <div id="spinner-overlay">
-    <div class="spinner-border text-warning" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  </div>
+<!-- Logo overlay -->
+<div id="spinner-overlay">
+  <img src="https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/images/sdj-logo.jpg" alt="Loading Logo" id="spinner-logo">
+</div>
 
     <div id="header"></div>
 
@@ -87,18 +99,15 @@
 
     <div id="footer"></div>
 
-  <script>
-    // Ensure DOM is loaded first
-    document.addEventListener("DOMContentLoaded", () => {
-      // Hide spinner exactly after 2 seconds
-      setTimeout(() => {
-        const spinner = document.getElementById('spinner-overlay');
-        if (spinner) spinner.style.display = 'none';
-      }, 250);
-    });
-  </script>
-
-
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Hide overlay exactly after 2 seconds
+    setTimeout(() => {
+      const spinner = document.getElementById('spinner-overlay');
+      if (spinner) spinner.style.display = 'none';
+    }, 250);
+  });
+</script>
 
     <script src="https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/components/script.js"></script>
     <script>
