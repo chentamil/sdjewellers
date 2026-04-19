@@ -38,6 +38,17 @@ img:hover {
 /* =========================
    NAVBAR
 ========================= */
+  .offcanvas {
+    /* background-color: #111; */
+    /* background: #09101f; */
+    background: linear-gradient(360deg, #2c0a0f, #6e1b25);
+}
+
+.offcanvas .nav-link {
+    color: #fff;
+    font-size: 18px;
+    padding: 10px 0;
+}
 
 /* GOLD NAVBAR */
 .navbar {
@@ -140,8 +151,8 @@ img:hover {
 
 /*  Carousel HTML with Dots and Arrows */
 .carousel-indicators [data-bs-target] {
-    width: 12px;
-    height: 12px;
+    width: 6px;
+    height: 6px;
     border-radius: 50%;
     background-color: #fff;
     opacity: 0.8;
@@ -329,7 +340,7 @@ background: #ffd700; */
     /* font-weight: 600; */
     position: relative;
     z-index: 999;
-    margin-top: 73px;
+    margin-top: 57px;
     /* font-size: 1.2rem; */
     /* display: flex; */
     background: linear-gradient(91.95deg, #b8292f -10%, #7c1a1f -9.98%, #b8292f 59.49%, #73171c 139.43%, #b8292f 139.44%);
