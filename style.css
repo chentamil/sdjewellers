@@ -42,13 +42,17 @@ img:hover {
     /* background-color: #111; */
     /* background: #09101f; */
     background: linear-gradient(360deg, #2c0a0f, #6e1b25);
+    /* background: #fff4d7; */
+  /*change X btn-close bg-warning to btn-close bg-danger in html */
 }
 
 .offcanvas .nav-link {
+    /* color: #681016; */
     color: #fff;
     font-size: 18px;
     padding: 10px 0;
 }
+
 
 /* GOLD NAVBAR */
 .navbar {
