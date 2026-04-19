@@ -40,9 +40,8 @@ img:hover {
 ========================= */
   .offcanvas {
     /* background-color: #111; */
-    /* background: #09101f; */
-    background: linear-gradient(360deg, #2c0a0f, #6e1b25);
-    /* background: #fff4d7; */
+    background: #09101f;
+    /* background: linear-gradient(360deg, #2c0a0f, #6e1b25);
   /*change X btn-close bg-warning to btn-close bg-danger in html */
 }
 
@@ -57,8 +56,8 @@ img:hover {
 /* GOLD NAVBAR */
 .navbar {
     /* background: linear-gradient(90deg, #5a0f1c, #8b1e2d); */
-    background: linear-gradient(90deg, #2c0a0f, #6e1b25);
-    /* background: #09101f; */
+    /*  background: linear-gradient(90deg, #2c0a0f, #6e1b25); */
+     background: #09101f;
 }
 
 /* BRAND */
