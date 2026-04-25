@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GST Tax Invoice Generator</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -63,7 +64,7 @@ function checkLogin(){
   const users = [
     {u: "admin", p: "1234"},
     {u: "staff1", p: "1111"},
-    {u: "staff2", p: "2222"}
+    {u: "ashwinsdj", p: "631502"}
   ];
 
   let username = document.getElementById("username").value;
@@ -104,6 +105,11 @@ body{
   background:#fff;
   padding:30px;
 }
+@media (max-width: 768px){
+  .invoice{
+    padding:15px;
+  }
+}
 .header{
   border-bottom:1px solid #000;
   margin-bottom:20px;
@@ -134,29 +140,35 @@ body{
 <div class="card-header fw-bold">GST Invoice Details</div>
 <div class="card-body">
 
-<h6>Seller</h6>
-<input id="sName" class="form-control mb-2" placeholder="Company Name">
-<input id="sAddress" class="form-control mb-2" placeholder="Company Address">
+<!-- <h6>Seller</h6> -->
+<input id="sName" class="form-control mb-2 d-none" placeholder="Company Name"  value="Sri Dhanalakshmi Jewellers">
+<input id="sAddress" class="form-control mb-2 d-none" placeholder="Company Address" value="No 77AB, Near New Railway Station, Jawaharlal Street, Big Kanchipuram - 631502">
 
-<div class="row">
-  <div class="col"><input id="sGst" class="form-control mb-2" placeholder="GSTIN"></div>
-  <div class="col"><input id="sMobile" class="form-control mb-2" placeholder="Mobile"></div>
-  <div class="col"><input id="sEmail" class="form-control mb-2" placeholder="Email (optional)"></div>
+<div class="row g-2">
+  <div class="col-12 col-md-4"><input id="sGst" class="form-control mb-2 d-none" placeholder="GSTIN" value="33AAPFS0212D1ZQ"></div>
+  <div class="col-12 col-md-4"><input id="sMobile" class="form-control mb-2 d-none" placeholder="Mobile" value="+91 73393 92916"></div>
+  <div class="col-12 col-md-4"><input id="sEmail" class="form-control mb-2 d-none" placeholder="Email (optional)" value="sdjkanchi2013@gmail.com"></div>
 </div>
 
-<input id="logoUrl" class="form-control mb-3" placeholder="Logo URL (optional)">
+<input id="logoUrl" class="form-control mb-3 d-none" placeholder="Logo URL (optional)" value="https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/images/sdj-logo-white.jpg">
 
 <h6>Customer</h6>
 <input id="cName" class="form-control mb-2" placeholder="Customer Name">
 <input id="cAddress" class="form-control mb-2" placeholder="Customer Address">
 
-<div class="row">
-  <div class="col"><input id="cMobile" class="form-control mb-3" placeholder="Customer Mobile (optional)"></div>
-  <div class="col"><input id="cEmail" class="form-control mb-3" placeholder="Customer Email (optional)"></div>
+<div class="row g-2">
+  <div class="col-12 col-md-6">
+    <input id="cMobile" class="form-control mb-2" placeholder="Customer Mobile (optional)">
+  </div>
+  <div class="col-12 col-md-6">
+    <input id="cEmail" class="form-control mb-2" placeholder="Customer Email (optional)">
+  </div>
 </div>
 
 <h6>Products</h6>
-<table class="table table-bordered">
+<div class="table-responsive">
+<table class="table table-bordered table-sm">
+</div>
 <thead>
 <tr>
 <th>Product</th><th>HSN</th><th>Qty</th><th>Price</th><th>GST %</th><th></th>
@@ -180,12 +192,12 @@ let rc = 0;
 function addRow(){
   rows.insertAdjacentHTML("beforeend",`
   <tr id="r${rc}">
-    <td><input class="form-control" id="p${rc}"></td>
+    <td><input class="form-control form-control-sm" id="p${rc}"></td>
     <td><input class="form-control" id="h${rc}"></td>
     <td><input type="number" class="form-control" id="q${rc}" value="1"></td>
     <td><input type="number" class="form-control" id="pr${rc}" value="0"></td>
     <td><input type="number" class="form-control" id="g${rc}" value="18"></td>
-    <td><button class="btn btn-sm btn-danger" onclick="r${rc}.remove()">Ã—</button></td>
+    <td><button class="btn btn-sm btn-danger" onclick="r${rc}.remove()">×</button></td>
   </tr>`);
   rc++;
 }
@@ -233,10 +245,10 @@ function openInvoice(){
       <td>${document.getElementById("p"+i).value}</td>
       <td>${document.getElementById("h"+i).value}</td>
       <td>${qty}</td>
-      <td>â‚¹${price}</td>
+      <td>₹${price}</td>
       <td>${gst}%</td>
-      <td>â‚¹${gstAmt.toFixed(2)}</td>
-      <td>â‚¹${total.toFixed(2)}</td>
+      <td>₹${gstAmt.toFixed(2)}</td>
+      <td>₹${total.toFixed(2)}</td>
     </tr>`;
   }
 
@@ -321,14 +333,14 @@ ${cMobile.value||cEmail.value?`<div>${cMobile.value?`Mobile: ${cMobile.value}`:"
 </table>
 
 <table class="table">
-<tr><td>Taxable Value</td><td class="text-end">â‚¹${taxable.toFixed(2)}</td></tr>
-<tr><td>Total GST</td><td class="text-end">â‚¹${gstTotal.toFixed(2)}</td></tr>
-<tr style="background: #f2f2f2;"><td class="fw-bold">Grand Total</td><td class="text-end grand-total">â‚¹${grandTotal.toFixed(2)}</td></tr>
+<tr><td>Taxable Value</td><td class="text-end">₹${taxable.toFixed(2)}</td></tr>
+<tr><td>Total GST</td><td class="text-end">₹${gstTotal.toFixed(2)}</td></tr>
+<tr style="background: #f2f2f2;"><td class="fw-bold">Grand Total</td><td class="text-end grand-total">₹${grandTotal.toFixed(2)}</td></tr>
 </table>
 
-<div class="row align-items-center">
-<div class="col"><strong>Amount in Words:</strong><br>Rupees ${words} Only</div>
-<div class="col text-end">
+<div class="row align-items-center text-center text-md-start">
+<div class="col-12 col-md-6 mb-3 mb-md-0"><strong>Amount in Words:</strong><br>Rupees ${words} Only</div>
+<div class="col-12 col-md-6 text-md-end">
 <div id="qr" style="display: inline-block;"></div>
 <div class="fw-bold small">Scan to Pay Rs.${grandTotal.toFixed(2)}</div>
 </div>
@@ -346,13 +358,7 @@ All disputes subject to local jurisdiction. This is a computer generated invoice
 
 <div class="d-flex gap-2 mt-3 no-print-buttons">
 
-<a class="btn btn-primary d-print-none" target="_blank"
-href="https://wa.me/?text=${encodeURIComponent(waInvoiceMsg)}">WhatsApp Invoice</a>
-
-<a class="btn btn-primary d-print-none" target="_blank"
-href="https://wa.me/?text=${encodeURIComponent(waPayMsg)}">Payment Link</a>
-
-<button onclick="window.print()" class="btn btn-success d-print-none">Print / Save PDF</button>
+<button onclick="window.print()" class="btn btn-success d-print-none w-100 w-md-auto">Print / Save PDF</button>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"><\/script>

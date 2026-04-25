@@ -50,13 +50,18 @@ footer { background:#7a0c2e; color:white; }
 #topBtn { position:fixed; bottom:80px; right:20px; display:none; }
 #topBtn.show { display:block; }
 
+button.btn.btn-outline-dark.btn-sm.filter-btn {
+    background: #7a0c2e;
+    color: #fff;
+}
+
 </style>
 </head>
 
 <body>
 
 <!-- NAVBAR : Combined menu -->
-<nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+<nav class="navbar navbar-dark navbar-expand-lg fixed-top p-0">
 <div class="container">
 <a class="navbar-brand d-flex align-items-center" href="#">
 <img src="https://cdn.dotpe.in/longtail/store-logo/9379239/362ODnzJ.webp" width="45" class="me-2 rounded-4">
@@ -169,7 +174,7 @@ K.A Wedding Lounge
 <div class="container" style="margin-top: 58px;">
 
   <!-- CATEGORY BUTTONS -->
-  <div id="categories" class="mb-3 sticky-top bg-white p-2">
+  <div id="categories" class="mb-3 sticky-top bg-white p-2" style="top: 56px; z-index: 1;">
     <button class="btn btn-dark btn-sm filter-btn" onclick="setCategory('all')">All</button>
     <button class="btn btn-outline-dark btn-sm filter-btn" onclick="setCategory('Saree')">Saree</button>
     <button class="btn btn-outline-dark btn-sm filter-btn" onclick="setCategory('Kurti')">Kurti</button>
@@ -213,7 +218,7 @@ window.initLightbox = function(items){
 
 <script>
 const SHEET_API = "https://opensheet.elk.sh/1oJPvnsl4rUAJXNyWIyHnwJG96faKQmS8ZKaRKm6jt3E/Sheet1";
-const phone = "919999999999";
+const phone = "917339140916";
 
 let allProducts = [];
 let currentCategory = 'all';
