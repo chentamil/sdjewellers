@@ -441,81 +441,85 @@
 
     <!--  -->
     <!-- Form Center -->
-    <section id="contact" class="py-5 bg-light d-none">
-    <div class="container" style="background: #fffaf5;">
+    <hr class="m-0">
+<section id="contactform" class="text-center bg-white">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
 
+        <div class="card shadow-lg">
+          <div class="card-body p-4">
 
-        <div class="text-center mb-4">
-            <h2>Contact Us</h2>
-            <p class="text-muted">Send us a message and we will respond soon</p>
+            <h4 class="mb-3 text-center">Contact Us</h4>
+
+            <div id="formAlert2" class="alert d-none"></div>
+
+            <form id="jewelForm">
+
+              <input type="hidden" name="site" value="sridhanalakshmijewellers.com">
+
+              <!-- Honeypot -->
+              <input type="text" name="website" class="d-none" autocomplete="off">
+
+              <input type="text" name="name" class="form-control mb-3" placeholder="Name" required>
+              <input type="email" name="email" class="form-control mb-3" placeholder="Email" required>
+
+              <textarea name="message" class="form-control mb-3" placeholder="Message"></textarea>
+
+              <button class="btn btn-dark w-100">Send Message</button>
+
+            </form>
+
+          </div>
         </div>
 
-        <div class="container">
+      </div>
+    </div>
+  </div>
+</section>
 
-            <h3 class="text-center mb-4">Send Enquiry</h3>
+<script>
+  const form2 = document.getElementById("jewelForm");
+  const alertBox2 = document.getElementById("formAlert2");
 
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-10 col-lg-8">
+  form2.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body p-4">
+    const data = Object.fromEntries(new FormData(form2));
 
+    try {
+      const res = await fetch("https://silent-hall-cc73.chentamil1988.workers.dev", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+      });
 
-                            <form name="contact" method="POST" netlify netlify-honeypot="bot-field">
+      const result = await res.json();
 
-                                <input type="hidden" name="form-name" value="contact">
+      if (!res.ok) {
+        throw new Error(result.error || "Failed");
+      }
 
+      alertBox2.className = "alert alert-success";
+      alertBox2.innerHTML = "✅ Message sent successfully!";
+      alertBox2.classList.remove("d-none");
 
-                                <div style="display:none;">
-                                    <label>
-                                        Don’t fill this out if you're human:
-                                        <input name="bot-field" type="text">
-                                    </label>
-                                </div>
+      alert("✅ Message sent success!");
+      form2.reset();
 
-                                <div class="row g-3">
+    } catch (err) {
 
+      alertBox2.className = "alert alert-danger";
+      alertBox2.innerHTML = "❌ Error sending message";
+      alertBox2.classList.remove("d-none");
 
-                                    <div class="col-md-6">
-                                        <label class="form-label">Your Name</label>
-                                        <input type="text" class="form-control" name="name" required>
-                                    </div>
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Your Email</label>
-                                        <input type="email" class="form-control" name="email" required>
-                                    </div>
-
-
-                                    <div class="col-md-6">
-                                        <label class="form-label">Mobile Number</label>
-                                        <input type="tel" class="form-control" name="mobile" required>
-                                    </div>
-
-
-                                    <div class="col-12">
-                                        <label class="form-label">Message</label>
-                                        <textarea class="form-control" name="message" rows="3" required></textarea>
-                                    </div>
-
-
-                                    <div class="col-12 text-center">
-                                        <button type="submit" class="btn btn-primary px-4">
-                                            Send
-                                        </button>
-                                    </div>
-
-                                </div>
-                            </form>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            </div>
-    </section>
+      alert("❌ Error sending message");
+      console.error(err);
+    }
+  });
+</script>
 
     <!-- google map -->
     <section class="py-5 bg-light text-center">
