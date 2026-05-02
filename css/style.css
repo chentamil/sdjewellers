@@ -200,9 +200,10 @@ img:hover {
 
 /* WHY US */
 .why-box {
-    background: #fff;
     padding: 20px;
-    border-left: 4px solid #d4af37;
+    border-left: 4px solid #b8292f;
+    background: #fff4d7;
+    color: #681016;
 }
 
 /* HIGHLIGHT */
@@ -339,7 +340,7 @@ footer a:hover {
 }
 
 .rate-bar {
-background: #ffd700; */
+    /* background: #ffd700; */
     /* color: #000; */
     /* font-weight: 600; */
     position: relative;
@@ -359,6 +360,7 @@ background: #ffd700; */
     /* display: inline-block; */
     background: #1d2a4d;
 }
+
 /* icons */
 .social-icons i {
     transition: transform 0.3s, text-shadow 0.3s, filter 0.3s;

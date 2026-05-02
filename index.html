@@ -73,7 +73,7 @@
                   <li class="nav-item"><a class="nav-link" href="/#collections">Collections</a></li>
                   <li class="nav-item"><a class="nav-link" href="/#services">Services</a></li>
                   <li class="nav-item"><a class="nav-link" href="/#why">Why Us</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/#contact">Contact</a></li>
+                  <li class="nav-item"><a class="nav-link" href="pages/contact/">Contact</a></li>
                 </ul>
               </div>
             </div>
@@ -337,22 +337,22 @@
                 <h2 class="text-center">Why Choose Us</h2>
             </div>
             <div class="row mt-4">
-                <div class="col-md-4">
+                <div class="col-md-4 mb-3">
                     <div class="why-box">60+ Years of Trust</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-3">
                     <div class="why-box">Premium Craftsmanship</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-3">
                     <div class="why-box">Customer Satisfaction</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-3">
                     <div class="why-box">Hallmarked Jewellery</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-3">
                     <div class="why-box">Wide Variety</div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 mb-3">
                     <div class="why-box">Prime Location</div>
                 </div>
             </div>
@@ -457,7 +457,12 @@
     <section id="contact" class="text-center border border-warning border-2 rounded-3">
         <div class="container">
             <h2>Visit Our Store</h2>
-            <p> No 77AB, Near New Railway Station,<br>Jawaharlal Street, Big Kanchipuram - 631502</p>
+            <h3><strong> Sri Dhanalakshmi Jewellers </strong></h3>
+            <p><a href="https://www.google.com/maps/dir//Sri+Dhanalakshmi+Jewellers,+77ab,+Jawaharlal+St,+Melkathirpur,+Kanchipuram,+Tamil+Nadu+631502/@12.8442384,79.706331" target="_blank" class="text-decoration-none">
+                <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>
+                <span class="text-dark">No 77AB, Near New Railway Station,<br>Jawaharlal Street, Big Kanchipuram - 631502.</span>
+                <br><small>Get Directions</small><i class="bi bi-box-arrow-up-right ms-1"></i></p>
+            </a></p>
             <p><strong>GSTIN:</strong> 33AAPFS0212D1ZQ</p>
             <p><strong>Since:</strong> 1960</p>
         </div>
@@ -540,6 +545,18 @@
                       </button>
                     </div>
 
+                    <!-- google-recaptcha -->
+                    <div class="col-12 text-center mt-2 recaptcha-inline small text-muted">
+                      <img class="img-fluid rounded-2" src="https://cdn.jsdelivr.net/gh/chentamil/sdjewellers@main/images/google-recaptcha.webp" alt="google-recaptcha">
+                    </div>
+
+                    <!-- Security Note -->
+                    <div class="secure-note text-center small text-secondary text-opacity-50 mt-2">
+                      <i class="bi bi-lock-fill"></i>
+                      <span>Your data is protected by reCAPTCHA <a class="small" href="https://policies.google.com/privacy" target="_blank">Privacy</a> ·
+                        <a class="small" href="https://policies.google.com/terms" target="_blank">Terms</a></span>
+                    </div>
+
                   </div>
                 </form>
 
@@ -552,14 +569,25 @@
       </div>
     </section>    
 
+<script src="https://www.google.com/recaptcha/api.js?render=6Led3dQsAAAAAJ3gbHohRpri-isc6Y8LcG1RwI4H"></script>
 <script>
   const form2 = document.getElementById("jewelForm");
   const alertBox2 = document.getElementById("formAlert2");
 
   form2.addEventListener("submit", async (e) => {
-    e.preventDefault();
+      e.preventDefault();
+       //const data = Object.fromEntries(new FormData(form2));
 
-    const data = Object.fromEntries(new FormData(form2));
+       //<-- ADD THIS (closes grecaptcha.ready)
+      grecaptcha.ready(async function () {
+        const token = await grecaptcha.execute("6Led3dQsAAAAAJ3gbHohRpri-isc6Y8LcG1RwI4H", { action: "submit" });
+
+        const data = {
+          ...Object.fromEntries(new FormData(form2)),
+          token: token,
+          site: window.location.hostname
+        };
+      //  
 
     try {
       const res = await fetch("https://silent-hall-cc73.chentamil1988.workers.dev", {
@@ -593,8 +621,14 @@
       console.error(err);
     }
   });
+  }); // <-- ADD THIS (closes grecaptcha.ready)
 </script>
 
+<style>
+.grecaptcha-badge {
+  visibility: hidden !important;
+}
+</style>
 
   </main>
 
@@ -617,7 +651,7 @@
             </div>
             <div class="col-md-3 mb-3">
                 <h5 class="text-warning">Contact</h5>
-                <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3910.252848312899!2d79.7033648!3d12.8426279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52c3657fa9ae81%3A0x33959a667e978e7d!2sSri%20Dhanalakshmi%20Jewellers!5e0!3m2!1sen!2sin!4v1697834000000!5m2!1sen!2sin" 
+                <a href="https://www.google.com/maps/dir//Sri+Dhanalakshmi+Jewellers,+77ab,+Jawaharlal+St,+Melkathirpur,+Kanchipuram,+Tamil+Nadu+631502/@12.8442384,79.706331" 
    target="_blank" 
    class="text-white text-decoration-none">
   <p class="mb-0">No 77AB, Near New Railway Station,<br>Jawaharlal Street, Big Kanchipuram - 631502 <i class="bi bi-box-arrow-up-right ms-1"></i></p>
