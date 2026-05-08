@@ -19,7 +19,7 @@ h2 {
     color: #fff !important;
     padding: 0 1rem;
     display: inline-block;
-    font-family: cursive;
+    /* font-family: cursive; */
 }
 
 section {
@@ -40,9 +40,10 @@ img:hover {
 ========================= */
   .offcanvas {
     /* background-color: #111; */
-    background: #09101f;
+    /* background: #09101f; */
     /* background: linear-gradient(360deg, #2c0a0f, #6e1b25);
   /*change X btn-close bg-warning to btn-close bg-danger in html */
+      background: #4d131a;
 }
 
 .offcanvas .nav-link {
@@ -56,13 +57,15 @@ img:hover {
 /* GOLD NAVBAR */
 .navbar {
     /* background: linear-gradient(90deg, #5a0f1c, #8b1e2d); */
-    /*  background: linear-gradient(90deg, #2c0a0f, #6e1b25); */
-     background: #09101f;
+     /* background: linear-gradient(90deg, #2c0a0f, #6e1b25); */
+    /* background: #09101f; */
+    /* background: #fff4d7;  */
+    background: #4d131a;
 }
 
 /* BRAND */
 .navbar-brand {
-    color: gold !important;
+    /* color: gold !important; */
     font-size: 1.2rem;
 }
 
@@ -72,6 +75,7 @@ img:hover {
     overflow: hidden;
     text-overflow: ellipsis; /* prevents breaking */
     font-size: 20px;
+    font-family: 'Droid Serif';
 }
 
 /* LINKS */
@@ -264,7 +268,8 @@ img:hover {
 ========================= */
 footer {
     /* background: linear-gradient(135deg, #3b0a14, #8b1e2d); */
-    background: #09101f;
+    /* background: #09101f; */
+    background: #4d131a;
     color: #fff;
 }
 
