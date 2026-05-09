@@ -43,7 +43,8 @@ img:hover {
     /* background: #09101f; */
     /* background: linear-gradient(360deg, #2c0a0f, #6e1b25);
   /*change X btn-close bg-warning to btn-close bg-danger in html */
-      background: #4d131a;
+    /* background: #4d131a;  */
+    background: #871a1a;
 }
 
 .offcanvas .nav-link {
@@ -60,7 +61,8 @@ img:hover {
      /* background: linear-gradient(90deg, #2c0a0f, #6e1b25); */
     /* background: #09101f; */
     /* background: #fff4d7;  */
-    background: #4d131a;
+    /*  background: #4d131a;  */   
+    background: #871a1a;
 }
 
 /* BRAND */

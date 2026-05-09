@@ -85,8 +85,10 @@
      <!-- gold rate Json start -->
         <div class="rate-bar">
         <marquee scrollamount="8" behavior="scroll" direction="left">
-            💰 <span class="me-4">Gold: ₹<span id="gold-rate"></span>/g</span> 
-            🥈 <span class="me-4">Silver: ₹<span id="silver-rate"></span>/g</span>
+            💰 <span class="me-4">Gold Market Rate : ₹<span id="gold-rate"></span>/g</span> 
+               <span class="me-4">Gold Offer Rate : ₹<span id="gold-sdjrate"></span>/g</span> 
+            🥈 <span class="me-4">Silver Market Rate : ₹<span id="silver-rate"></span>/g</span>
+               <span class="me-4">Silver Offer Rate : ₹<span id="silver-sdjrate"></span>/g</span>
             📅 <span class="me-4">Updated: <span id="last-updated"></span></span>
         </marquee>
         </div>
@@ -98,7 +100,9 @@
                 const rates = data[0];
 
                 document.getElementById('gold-rate').innerText = rates.gold_rate;
+                document.getElementById('gold-sdjrate').innerText = rates.gold_sdj_rate;
                 document.getElementById('silver-rate').innerText = rates.silver_rate;
+                document.getElementById('silver-sdjrate').innerText = rates.silver_sdj_rate;
                 document.getElementById('last-updated').innerText = rates.last_updated;
             })
             .catch(error => {
@@ -248,7 +252,7 @@
         <div class="row">
             <div class="col-md-3 mb-3">
                 <h5 class="text-warning"><i class="bi bi-gem"></i> Sri Dhanalakshmi Jewellers</h5>
-                <p class="text-secondary">Since 1960, delivering trust, purity, and elegant jewellery in Kanchipuram.</p>
+                <p class="text-white">Since 1960, delivering trust, purity, and elegant jewellery in Kanchipuram.</p>
             </div>
 
             <div class="col-md-3 mb-3">
