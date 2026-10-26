@@ -1,0 +1,851 @@
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+    
+        Chit Savings Plan scheme1 | Sri Dhanalakshmi Jewellers
+    
+    </title>
+    <meta name="description"
+        content="Trusted Jewellery Store since 1960. Gold, Silver & Custom Jewellery in Kanchipuram.">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Droid+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="https://www.sridhanalakshmijewellers.com/css/style.css" rel="stylesheet">
+    <!-- <link href="http://localhost:8080/css/style.css" rel="stylesheet"> -->
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://www.sridhanalakshmijewellers.com/images/sdj-logo.jpg" type="image/jpeg">
+    
+    <!-- Tracking Codes -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GYBKKRVMRK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GYBKKRVMRK');
+    </script>
+
+</head>
+
+<body>
+
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top p-0">
+        <div class="container">
+            <a href="https://www.sridhanalakshmijewellers.com/" class="navbar-brand fw-bold"><img data-visualcompletion="media-vc-image"
+                    style="width: 48px;height: 48px; object-fit: contain;border-radius: 4px;"
+                    src="https://www.sridhanalakshmijewellers.com/images//sdj-logo-white.jpg">
+                        <span class="brand-text ms-2 d-none d-sm-inline">
+                            Sri Dhanalakshmi Jewellers
+                        </span>
+                        <span class="brand-text ms-2 d-inline d-sm-none">
+                            SD Jewellers
+                        </span>             
+            </a>
+
+
+ <!-- above is navbar,below is offcanvas for mobiles -->
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end  w-75" tabindex="-1" id="menu"> 
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title text-warning">Menu</h5>
+                <button type="button" class="btn-close bg-warning opacity-100" data-bs-dismiss="offcanvas"></button>
+              </div>
+
+              <div class="offcanvas-body">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/#collections">Collections</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/#chitlink">Chit Schemes</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/#services">Services</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/#why">Why Us</a></li>
+                  <li class="nav-item"><a class="nav-link" href="pages/contact/">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </nav>
+
+  <main>
+    <!-- gold rate Json start -->
+
+<div class="rate-bar d-none" id="rateBar">
+
+    <div class="ticker-wrapper">
+        <div class="ticker-content">
+
+            💰
+            <span class="me-4">
+                Gold Market Rate : ₹<span id="gold-rate"></span>/g
+            </span>
+
+            <span class="me-4">
+                Gold Offer Rate : ₹<span id="gold-sdjrate"></span>/g
+            </span>
+
+            🥈
+            <span class="me-4">
+                Silver Market Rate : ₹<span id="silver-rate"></span>/g
+            </span>
+
+            <span class="me-4">
+                Silver Offer Rate : ₹<span id="silver-sdjrate"></span>/g
+            </span>
+
+            📅
+            <span class="me-4">
+                Updated: <span id="last-updated"></span>
+            </span>
+
+        </div>
+    </div>
+
+</div>
+
+
+<style>
+    .rate-bar {
+        /* background: #4d131a; */
+        color: #fff;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+    }
+
+    .ticker-wrapper {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .ticker-content {
+        display: inline-block;
+        padding-left: 100%;
+        animation: rateScroll 25s linear infinite;
+        font-size: 1rem;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+
+    /* scrolling animation */
+    @keyframes rateScroll {
+
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+
+    }
+
+
+    /* optional: slower on mobile */
+    @media(max-width:768px) {
+
+        .ticker-content {
+            animation-duration: 18s;
+            font-size: 14px;
+        }
+
+    }
+</style>
+
+
+<script>
+
+    const jsonUrl = 'https://script.google.com/macros/s/AKfycbz6w2KgdL2ctrXykrxOpTi6Aus5F8xi7UqLymu0V84hjsXpWG2sEOoSS1cbohAffv0-/exec';
+    // const jsonUrl = 'https://opensheet.elk.sh/1PmqYry7OrIzqm9I0cR7rmcyXspDmmDQhjMkqKwXw59o/Sheet1';
+
+    fetch(jsonUrl)
+
+        .then(response => response.json())
+
+        .then(data => {
+
+
+            const rates = data[0];
+
+
+            // Show / Hide rate bar
+            const rateBar = document.getElementById("rateBar");
+
+            const display = String(rates.display_rate)
+                .trim()
+                .toLowerCase();
+
+
+            if (display === "yes") {
+
+                rateBar.classList.remove("d-none");
+
+            } else {
+
+                rateBar.classList.add("d-none");
+
+            }
+
+
+
+            // Fill rates
+
+            document.getElementById('gold-rate').innerText =
+                rates.gold_rate;
+
+
+            document.getElementById('gold-sdjrate').innerText =
+                rates.gold_sdj_rate;
+
+
+            document.getElementById('silver-rate').innerText =
+                rates.silver_rate;
+
+
+            document.getElementById('silver-sdjrate').innerText =
+                rates.silver_sdj_rate;
+
+
+            document.getElementById('last-updated').innerText =
+                rates.last_updated;
+
+
+        })
+
+
+        .catch(error => {
+
+            console.error(
+                'Error fetching rates:',
+                error
+            );
+
+        });
+
+
+</script>
+
+<!-- gold rate Json end -->
+
+ <!-- PAGE CONTENT -->
+<div class="container mt-2">
+<style>
+    .chit-page {
+        background-color: #fffaf0;
+        color: #55351d;
+        font-family: sans-serif, 'Poppins';
+    }
+
+    .chit-heading {
+    background: linear-gradient(91.95deg, #b8292f -10%, #7c1a1f -9.98%, #b8292f 59.49%, #73171c 139.43%, #b8292f 139.44%);
+    border-radius: 25px;
+    height: 36px;
+    line-height: 36px;
+    font-family: Figtree-Medium, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff !important;
+    padding: 0 1rem;
+    display: inline-block;
+    }
+
+    .chit-card {
+        border: 1px solid #e6c995;
+        border-radius: 0.75rem;
+        background-color: #fffdf7;
+        box-shadow: 0 0.25rem 1rem rgba(90, 49, 15, 0.07);
+    }
+
+    .chit-table thead th {
+        background-color: #8b3218;
+        color: #fff8dc;
+        vertical-align: middle;
+    }
+
+    .chit-table td,
+    .chit-table th {
+        border-color: #e6c995;
+        padding: 0.7rem;
+    }
+
+    .chit-table tfoot th,
+    .chit-table tfoot td {
+        background-color: #fff0cc;
+        font-weight: 700;
+    }
+
+    .chit-highlight {
+        color: #8b3218;
+        font-weight: 700;
+    }
+
+    .chit-rules li {
+        padding-left: 0.35rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.7;
+    }
+
+    .chit-rules li::marker {
+        color: #a54a21;
+    }
+
+    .chit-total {
+        background-color: #fff0cc;
+        border: 1px solid #e6c995;
+        border-radius: 0.75rem;
+    }
+
+    @media (max-width: 575.98px) {
+        .chit-table {
+            font-size: 0.85rem;
+        }
+
+        .chit-table td,
+        .chit-table th {
+            padding: 0.45rem 0.35rem;
+        }
+    }
+</style>
+
+<div class="chit-page py-5">
+    <div class="container">
+
+        <!-- PAGE INTRODUCTION -->
+        <header class="text-center mb-5">
+            <h1 class="display-6 fw-bold mb-3">
+                Jewellery Chit Scheme
+            </h1>
+            <p class="lead mb-0">
+                Save monthly towards your jewellery purchase
+                through our 11-month chit scheme.
+            </p>
+        </header>
+
+        <!-- SCHEME DETAILS -->
+        <section class="chit-card p-3 p-md-4 mb-5">
+            <h2 class="h4 chit-heading mb-4">
+                Scheme Details
+            </h2>
+
+            <ul class="chit-rules mb-0">
+                <li>
+                    The chit scheme runs for
+                    <strong>11 months</strong>.
+                </li>
+
+                <li>
+                    Members may purchase jewellery using
+                    the amount accumulated under the scheme.
+                </li>
+
+                <li>
+                    Each member may purchase jewellery or
+                    make an eligible advance booking in
+                    accordance with the scheme terms.
+                </li>
+
+                <li>
+                    Members can contribute a monthly
+                    instalment of ₹1,000 or multiples thereof,
+                    subject to the scheme's applicable rules.
+                </li>
+
+                <li>
+                    Eligible instalments include ₹1,000,
+                    ₹2,000, ₹3,000, ₹4,000 and other permitted
+                    multiples.
+                </li>
+
+                <li>
+                    The accumulated amount may be used towards
+                    jewellery purchases, subject to the
+                    scheme conditions.
+                </li>
+
+                <li>
+                    Members should complete the required
+                    registration and documentation.
+                </li>
+
+                <li>
+                    Scheme benefits and jewellery pricing
+                    are subject to the terms described below.
+                </li>
+            </ul>
+        </section>
+
+        <!-- MONTHLY SCHEME TABLE -->
+        <section class="chit-card p-3 p-md-4 mb-5">
+            <h2 class="h4 chit-heading mb-4">
+                Monthly Instalment and Gold Rate Schedule
+            </h2>
+
+            <p class="text-muted small">
+                The figures below are transcribed from the
+                Tamil notice. Confirm the month-wise rates
+                before using this table for customer billing.
+            </p>
+
+            <div class="table-responsive">
+                <table class="table table-bordered
+                              table-striped chit-table
+                              text-center align-middle mb-0">
+                    <thead>
+                        <tr>
+                            <th scope="col">Month / Year</th>
+                            <th scope="col">Instalment (₹)</th>
+                            <th scope="col">Gold Rate (₹)</th>
+                            <th scope="col">Gold (g)</th>
+                            <th scope="col">Cumulative Gold (g)</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>November 2025</td>
+                            <td>5,000</td>
+                            <td>11,550</td>
+                            <td>0.433</td>
+                            <td>0.433</td>
+                        </tr>
+                        <tr>
+                            <td>December 2025</td>
+                            <td>5,000</td>
+                            <td>11,500</td>
+                            <td>0.435</td>
+                            <td>0.868</td>
+                        </tr>
+                        <tr>
+                            <td>January 2026</td>
+                            <td>5,000</td>
+                            <td>11,600</td>
+                            <td>0.431</td>
+                            <td>1.299</td>
+                        </tr>
+                        <tr>
+                            <td>February 2026</td>
+                            <td>5,000</td>
+                            <td>11,700</td>
+                            <td>0.427</td>
+                            <td>1.726</td>
+                        </tr>
+                        <tr>
+                            <td>March 2026</td>
+                            <td>5,000</td>
+                            <td>11,450</td>
+                            <td>0.437</td>
+                            <td>2.163</td>
+                        </tr>
+                        <tr>
+                            <td>April 2026</td>
+                            <td>5,000</td>
+                            <td>11,800</td>
+                            <td>0.424</td>
+                            <td>2.587</td>
+                        </tr>
+                        <tr>
+                            <td>May 2026</td>
+                            <td>5,000</td>
+                            <td>11,600</td>
+                            <td>0.431</td>
+                            <td>3.018</td>
+                        </tr>
+                        <tr>
+                            <td>June 2026</td>
+                            <td>5,000</td>
+                            <td>11,530</td>
+                            <td>0.434</td>
+                            <td>3.452</td>
+                        </tr>
+                        <tr>
+                            <td>July 2026</td>
+                            <td>5,000</td>
+                            <td>11,850</td>
+                            <td>0.422</td>
+                            <td>3.874</td>
+                        </tr>
+                        <tr>
+                            <td>August 2026</td>
+                            <td>5,000</td>
+                            <td>12,000</td>
+                            <td>0.417</td>
+                            <td>4.291</td>
+                        </tr>
+                        <tr>
+                            <td>September 2026</td>
+                            <td>5,000</td>
+                            <td>11,950</td>
+                            <td>0.418</td>
+                            <td>4.709</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- EXAMPLE CALCULATION -->
+        <section class="chit-card p-3 p-md-4 mb-5">
+            <h2 class="h4 chit-heading mb-4">
+                Example Calculation
+            </h2>
+
+            <div class="row g-3">
+                <div class="col-12 col-md-6">
+                    <div class="border rounded p-3 h-100">
+                        <div class="text-muted small">
+                            Total contributions
+                        </div>
+                        <div class="fs-4 fw-bold">
+                            ₹55,000
+                        </div>
+                        <div class="small text-muted">
+                            ₹5,000 × 11 months
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="border rounded p-3 h-100">
+                        <div class="text-muted small">
+                            Accumulated gold quantity
+                        </div>
+                        <div class="fs-4 fw-bold">
+                            4.709 grams
+                        </div>
+                        <div class="small text-muted">
+                            As stated in the original schedule
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chit-total p-3 p-md-4 mt-4">
+                <h3 class="h5 chit-highlight">
+                    Illustrative jewellery calculation
+                </h3>
+
+                <div class="d-flex justify-content-between
+                            gap-3 py-2 border-bottom">
+                    <span>Gold quantity</span>
+                    <strong>4.709 g</strong>
+                </div>
+
+                <div class="d-flex justify-content-between
+                            gap-3 py-2 border-bottom">
+                    <span>Additional gold quantity</span>
+                    <strong>1.591 g</strong>
+                </div>
+
+                <div class="d-flex justify-content-between
+                            gap-3 py-2 border-bottom">
+                    <span>Total gold quantity</span>
+                    <strong>6.300 g</strong>
+                </div>
+
+                <div class="d-flex justify-content-between
+                            gap-3 py-2 border-bottom">
+                    <span>Illustrative gold rate per gram</span>
+                    <strong>₹12,100</strong>
+                </div>
+
+                <div class="d-flex justify-content-between
+                            gap-3 py-2 border-bottom">
+                    <span>Value of 1.782 g at ₹12,100</span>
+                    <strong>₹21,562</strong>
+                </div>
+
+                <div class="d-flex justify-content-between
+                            gap-3 py-2 border-bottom">
+                    <span>GST at 3% (as shown on the notice)</span>
+                    <strong>₹647 approximately</strong>
+                </div>
+
+                <div class="d-flex justify-content-between
+                            gap-3 pt-3">
+                    <span class="fw-bold">Amount shown on notice</span>
+                    <span class="fs-4 chit-highlight">
+                        ₹23,859
+                    </span>
+                </div>
+
+                <p class="small text-muted mt-3 mb-0">
+                    Important: The original calculation also
+                    shows a 12% VA entry and other figures.
+                    The printed amounts do not all reconcile
+                    arithmetically. Please verify the
+                    calculation with the original records
+                    before displaying this as a payable amount.
+                </p>
+            </div>
+        </section>
+
+        <!-- TERMS AND CONDITIONS -->
+        <section class="chit-card p-3 p-md-4 mb-5">
+            <h2 class="h4 chit-heading mb-4">
+                Terms and Conditions
+            </h2>
+
+            <ol class="chit-rules mb-0">
+                <li>
+                    The scheme period is 11 months.
+                </li>
+
+                <li>
+                    Members may remit their instalments
+                    according to the scheme schedule.
+                </li>
+
+                <li>
+                    Jewellery purchases must comply with
+                    the scheme's eligibility and purchase
+                    conditions.
+                </li>
+
+                <li>
+                    Benefits are subject to the applicable
+                    government rules and regulations.
+                </li>
+
+                <li>
+                    No interest is payable on the accumulated
+                    scheme amount, as stated in the notice.
+                </li>
+
+                <li>
+                    Members must retain their chit or
+                    membership records and provide them
+                    when required.
+                </li>
+
+                <li>
+                    The scheme passbook or membership record
+                    must be presented when making a claim
+                    or purchase, where applicable.
+                </li>
+
+                <li>
+                    Scheme records must be maintained
+                    properly by the member.
+                </li>
+
+                <li>
+                    Scheme rules and benefits are subject
+                    to the applicable terms and conditions.
+                </li>
+
+                <li>
+                    Members who complete all 11 monthly
+                    instalments may receive the eligible
+                    scheme benefits after completion,
+                    subject to the scheme rules.
+                </li>
+
+                <li>
+                    If the scheme is discontinued or
+                    cancelled before completion, benefits
+                    may be affected according to the
+                    applicable terms.
+                </li>
+
+                <li>
+                    Jewellery purchased under the scheme
+                    will be valued according to the
+                    applicable purchase terms.
+                </li>
+
+                <li>
+                    GST and other applicable statutory
+                    charges are payable as required by law.
+                </li>
+
+                <li>
+                    Additional terms may apply to high-value
+                    jewellery purchases and eligible
+                    scheme benefits.
+                </li>
+
+                <li>
+                    All transactions are subject to
+                    applicable government regulations.
+                </li>
+            </ol>
+        </section>
+
+        <!-- FOOTNOTE -->
+        <footer class="text-center py-3">
+            <p class="small text-muted mb-0">
+                Please contact our jewellery shop for the
+                official scheme rules, current gold rates,
+                applicable charges and membership details.
+            </p>
+        </footer>
+
+    </div>
+</div> 
+
+</div>  
+
+  </main>
+
+  <!-- FOOTER -->
+<footer class="pt-5 pb-3 text-white fw-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <h5 class="text-warning"><i class="bi bi-gem"></i> Sri Dhanalakshmi Jewellers</h5>
+                <p class="text-white">Since 1960, delivering trust, purity, and elegant jewellery in Kanchipuram.</p>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <h5 class="text-warning">Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/#about" class="text-white text-decoration-none">About</a></li>
+                    <li><a href="/#collections" class="text-white text-decoration-none">Collections</a></li>
+                    <li><a href="/#services" class="text-white text-decoration-none">Services</a></li>
+                    <li><a href="/#contact" class="text-white text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <h5 class="text-warning">Contact</h5>
+
+                <a href="https://www.google.com/maps/dir//Sri+Dhanalakshmi+Jewellers,+77ab,+Jawaharlal+St,+Melkathirpur,+Kanchipuram,+Tamil+Nadu+631502/@12.8442384,79.706331" target="_blank" class="text-white text-decoration-none">
+                    <p class="mb-0">No 77AB, Near New Railway Station,<br>Jawaharlal Street, Big Kanchipuram - 631502 <i class="bi bi-box-arrow-up-right ms-1"></i></p>
+                </a>
+
+                <p><i class="bi bi-envelope"></i><a href="mailto:sdjkanchi2013@gmail.com" class="ms-2 text-decoration-none text-light">sdjkanchi2013@gmail.com</a></p>
+                <p><i class="bi bi-phone-flip"></i><a href="tel:04427233017" class="ms-2 text-decoration-none text-light">04427233017</a></p>
+                <p><i class="bi bi-telephone"></i> <a href="tel:+917339392916" class="ms-2 text-decoration-none text-light">+917339392916</a></p>
+            </div>
+
+            <div class="col-md-3 mb-3">
+                <h5 class="text-warning">Policies</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/pages/terms-conditions" class="text-white text-decoration-none">Terms and Conditions</a></li>
+                    <li><a href="/pages/privacy-policy" class="text-white text-decoration-none">Privacy Policy</a></li>
+                    <li><a href="/pages/chit" class="text-white text-decoration-none">Chit</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.2);">
+
+        <!-- Social Media Icons -->
+        <div class="text-center mb-3 social-icons">
+            <i class="bi bi-facebook fs-3 me-3" style="color:#1877F2; cursor:pointer;"
+                onclick="window.open('https://www.facebook.com/sdjjewellers','_blank')"></i>
+
+            <i class="bi bi-instagram fs-3 me-3" style="color:#E1306C; cursor:pointer;"
+                onclick="window.open('https://www.instagram.com/sridhanalakshmijewellers/','_blank')"></i>
+
+            <i class="bi bi-youtube fs-3" style="color:#FF0000; cursor:pointer;"
+                onclick="window.open('https://www.youtube.com/@sridhanalakshmijewellers3090','_blank')"></i>
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.2);">
+
+        <div class="text-center p-4">
+            <p class="mb-0">All rights reserved © 2026 Sri Dhanalakshmi Jewellers</p>
+        </div>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="btn btn-primary shadow back-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- CALL BUTTON -->
+    <a href="tel:7339392916" class="btn btn-success shadow call-btn d-md-none">
+        <i class="bi bi-telephone-fill"></i>
+    </a>
+
+    <!-- WHATSAPP BUTTON -->
+    <a href="https://wa.me/917339392916" target="_blank" class="btn btn-lg btn-success shadow whatsapp-btn">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+</footer>
+
+<!-- BOOTSTRAP -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/* BACK TO TOP LOGIC (safe + lightweight) */
+(() => {
+    const backToTopBtn = document.getElementById("backToTop");
+
+    if (!backToTopBtn) return;
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add("show");
+        } else {
+            backToTopBtn.classList.remove("show");
+        }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+})();
+</script>
+
+<style>
+/* FLOATING ACTION SYSTEM (NEW) */
+.back-top,
+.whatsapp-btn,
+.call-btn{
+    position: fixed;
+    right: 20px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* STACK ORDER (BOTTOM → TOP) */
+.whatsapp-btn{
+    bottom: 20px;
+    background: #198754;
+    border: none;
+    
+}
+
+.call-btn{
+    bottom: 80px;
+}
+
+.back-top{
+    bottom: 140px !important;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+/* SHOW BACK TO TOP */
+.back-top.show{
+    opacity: 1;
+    pointer-events: auto;
+}
+</style>
+
+</body>

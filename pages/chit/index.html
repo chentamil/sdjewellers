@@ -72,6 +72,7 @@
                 <ul class="navbar-nav ms-auto">
                   <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
                   <li class="nav-item"><a class="nav-link" href="/#collections">Collections</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/#chitlink">Chit Schemes</a></li>
                   <li class="nav-item"><a class="nav-link" href="/#services">Services</a></li>
                   <li class="nav-item"><a class="nav-link" href="/#why">Why Us</a></li>
                   <li class="nav-item"><a class="nav-link" href="pages/contact/">Contact</a></li>
@@ -244,9 +245,277 @@
 
  <!-- PAGE CONTENT -->
 <div class="container mt-2">
- <h2>Chit Page coming soon....</h2>
 
-  <p>Example Text here</p>
+<!-- CHIT SCHEMES START -->
+<section id="chitlink" class="chit-schemes py-5">
+    <div class="container">
+
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+            <span class="chit-eyebrow text-uppercase">
+                Save Today, Shine Tomorrow
+            </span>
+
+            <h2 class="chit-title mt-2 mb-3">
+                Gold Savings Schemes
+            </h2>
+
+            <p class="chit-description mx-auto mb-0">
+                Plan your savings with our gold savings schemes.
+                Choose a plan that suits your budget.
+            </p>
+
+            <div class="chit-divider mx-auto mt-4"></div>
+        </div>
+
+        <!-- Scheme Cards -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- Scheme 1 -->
+            <div class="col-12 col-sm-6 col-lg-5">
+                <a href="/pages/scheme1"
+                   class="chit-scheme-link text-decoration-none">
+
+                    <div class="chit-scheme-card h-100 p-4 p-md-5 text-center">
+
+                        <div class="chit-icon mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="32" height="32"
+                                 viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor"
+                                 stroke-width="1.5"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <path d="M8 12h8"></path>
+                                <path d="M12 8v8"></path>
+                            </svg>
+                        </div>
+
+                        <h3 class="chit-card-title mb-2">
+                            Gold Savings Scheme 01
+                        </h3>
+
+                        <p class="chit-card-description mb-4">
+                            Explore the scheme details, monthly savings
+                            options and applicable benefits.
+                        </p>
+
+                        <span class="chit-card-action">
+                            Explore Scheme
+                            <span aria-hidden="true">&rarr;</span>
+                        </span>
+
+                    </div>
+                </a>
+            </div>
+
+            <!-- Scheme 2 -->
+            <div class="col-12 col-sm-6 col-lg-5">
+                <a href="/pages/scheme2"
+                   class="chit-scheme-link text-decoration-none">
+
+                    <div class="chit-scheme-card h-100 p-4 p-md-5 text-center">
+
+                        <div class="chit-icon mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="32" height="32"
+                                 viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor"
+                                 stroke-width="1.5"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-4Z"></path>
+                                <path d="m9 12 2 2 4-4"></path>
+                            </svg>
+                        </div>
+
+                        <h3 class="chit-card-title mb-2">
+                            Gold Savings Scheme 02
+                        </h3>
+
+                        <p class="chit-card-description mb-4">
+                            Discover another savings option and review
+                            its terms before choosing your plan.
+                        </p>
+
+                        <span class="chit-card-action">
+                            Explore Scheme
+                            <span aria-hidden="true">&rarr;</span>
+                        </span>
+
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Supporting Information -->
+        <div class="text-center mt-5">
+            <p class="chit-note mb-0">
+                Please review the scheme terms and conditions
+                before enrolment.
+            </p>
+        </div>
+
+    </div>
+</section>
+<!-- CHIT SCHEMES END -->
+
+
+<style>
+    /* Chit Schemes Section */
+    .chit-schemes {
+        background: linear-gradient(
+            180deg,
+            #fffdf8 0%,
+            #fbf5e9 100%
+        );
+        color: #4c3523;
+    }
+
+    .chit-eyebrow {
+        display: inline-block;
+        color: #9a6b26;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+    }
+
+    .chit-title {
+        color: #5b321b;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        font-weight: 700;
+        letter-spacing: -0.035em;
+    }
+
+    .chit-description {
+        max-width: 620px;
+        color: #786958;
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .chit-divider {
+        width: 64px;
+        height: 3px;
+        border-radius: 10px;
+        background: linear-gradient(
+            90deg,
+            #bd8b3c,
+            #e8ca83
+        );
+    }
+
+    /* Scheme Cards */
+    .chit-scheme-link {
+        display: block;
+        height: 100%;
+        color: inherit;
+        border-radius: 18px;
+        outline-offset: 5px;
+    }
+
+    .chit-scheme-card {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        border: 1px solid #ead9b9;
+        border-radius: 18px;
+        background-color: #fffefa;
+        box-shadow: 0 8px 24px rgba(91, 50, 27, 0.05);
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease,
+            border-color 0.25s ease;
+    }
+
+    .chit-scheme-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(
+            90deg,
+            #9a6b26,
+            #ead29a,
+            #9a6b26
+        );
+    }
+
+    .chit-scheme-link:hover .chit-scheme-card,
+    .chit-scheme-link:focus-visible .chit-scheme-card {
+        transform: translateY(-6px);
+        border-color: #d5b46f;
+        box-shadow: 0 16px 36px rgba(91, 50, 27, 0.12);
+    }
+
+    .chit-scheme-link:focus-visible {
+        outline: 2px solid #9a6b26;
+    }
+
+    .chit-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 68px;
+        height: 68px;
+        border: 1px solid #ead9b9;
+        border-radius: 50%;
+        background-color: #fbf3df;
+        color: #946522;
+    }
+
+    .chit-card-title {
+        color: #63371e;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    .chit-card-description {
+        color: #786958;
+        font-size: 0.93rem;
+        line-height: 1.8;
+    }
+
+    .chit-card-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #8b3218;
+        font-size: 0.9rem;
+        font-weight: 700;
+        transition: gap 0.2s ease;
+    }
+
+    .chit-scheme-link:hover .chit-card-action {
+        gap: 15px;
+    }
+
+    .chit-note {
+        color: #82715f;
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .chit-scheme-card,
+        .chit-card-action {
+            transition: none;
+        }
+
+        .chit-scheme-link:hover .chit-scheme-card {
+            transform: none;
+        }
+    }
+</style>
+
 </div>  
 
   </main>

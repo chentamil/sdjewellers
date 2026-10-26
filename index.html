@@ -72,6 +72,7 @@
                 <ul class="navbar-nav ms-auto">
                   <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
                   <li class="nav-item"><a class="nav-link" href="/#collections">Collections</a></li>
+                  <li class="nav-item"><a class="nav-link" href="/#chitlink">Chit Schemes</a></li>
                   <li class="nav-item"><a class="nav-link" href="/#services">Services</a></li>
                   <li class="nav-item"><a class="nav-link" href="/#why">Why Us</a></li>
                   <li class="nav-item"><a class="nav-link" href="pages/contact/">Contact</a></li>
@@ -281,7 +282,7 @@
 
     </div>
 </section>
-<div class="sdj-cat-nav text-white">
+<div class="sdj-cat-nav text-white d-none">
 
     <!-- GOLD -->
     <div class="sdj-cat-item dropdown px-3">
@@ -435,33 +436,277 @@ ul.dropdown-menu {
 
     </div>
 </section>
- <!-- CHIT SCHEMES start-->
-    <section id="collections" class="bg-light py-3 text-center">
-        <div class="container">
 
-            <h2 class="mb-4">Chit Schemes</h2>
-            <p>Some description about our chit schemes.</p>
+<!-- CHIT SCHEMES START -->
+<section id="chitlink" class="chit-schemes py-5">
+    <div class="container">
 
-            <!-- Scheme TYPES -->
-            <div class="row mt-1 g-4">
+        <!-- Section Heading -->
+        <div class="text-center mb-5">
+            <span class="chit-eyebrow text-uppercase">
+                Save Today, Shine Tomorrow
+            </span>
 
-                <div class="col-6 ">
-                   <a href="/pages/scheme1" class="text-decoration-none fw-bold">
-                    <div class="collection-box">Scheme 1</div>
-                   </a> 
-                </div>
+            <h2 class="chit-title mt-2 mb-3">
+                Gold Savings Schemes
+            </h2>
 
-                <div class="col-6 ">
-                    <a href="/pages/scheme2" class="text-decoration-none fw-bold">
-                        <div class="collection-box">Scheme 2</div>
-                    </a>    
-                </div>
+            <p class="chit-description mx-auto mb-0">
+                Plan your savings with our gold savings schemes.
+                Choose a plan that suits your budget.
+            </p>
 
+            <div class="chit-divider mx-auto mt-4"></div>
+        </div>
+
+        <!-- Scheme Cards -->
+        <div class="row g-4 justify-content-center">
+
+            <!-- Scheme 1 -->
+            <div class="col-12 col-sm-6 col-lg-5">
+                <a href="/pages/scheme1"
+                   class="chit-scheme-link text-decoration-none">
+
+                    <div class="chit-scheme-card h-100 p-4 p-md-5 text-center">
+
+                        <div class="chit-icon mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="32" height="32"
+                                 viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor"
+                                 stroke-width="1.5"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <circle cx="12" cy="12" r="9"></circle>
+                                <path d="M8 12h8"></path>
+                                <path d="M12 8v8"></path>
+                            </svg>
+                        </div>
+
+                        <h3 class="chit-card-title mb-2">
+                            Gold Savings Scheme 01
+                        </h3>
+
+                        <p class="chit-card-description mb-4">
+                            Explore the scheme details, monthly savings
+                            options and applicable benefits.
+                        </p>
+
+                        <span class="chit-card-action">
+                            Explore Scheme
+                            <span aria-hidden="true">&rarr;</span>
+                        </span>
+
+                    </div>
+                </a>
+            </div>
+
+            <!-- Scheme 2 -->
+            <div class="col-12 col-sm-6 col-lg-5">
+                <a href="/pages/scheme2"
+                   class="chit-scheme-link text-decoration-none">
+
+                    <div class="chit-scheme-card h-100 p-4 p-md-5 text-center">
+
+                        <div class="chit-icon mx-auto mb-4">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                 width="32" height="32"
+                                 viewBox="0 0 24 24"
+                                 fill="none" stroke="currentColor"
+                                 stroke-width="1.5"
+                                 stroke-linecap="round"
+                                 stroke-linejoin="round"
+                                 aria-hidden="true">
+                                <path d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-4Z"></path>
+                                <path d="m9 12 2 2 4-4"></path>
+                            </svg>
+                        </div>
+
+                        <h3 class="chit-card-title mb-2">
+                            Gold Savings Scheme 02
+                        </h3>
+
+                        <p class="chit-card-description mb-4">
+                            Discover another savings option and review
+                            its terms before choosing your plan.
+                        </p>
+
+                        <span class="chit-card-action">
+                            Explore Scheme
+                            <span aria-hidden="true">&rarr;</span>
+                        </span>
+
+                    </div>
+                </a>
             </div>
 
         </div>
-    </section>
- <!-- CHIT SCHEMES end-->
+
+        <!-- Supporting Information -->
+        <div class="text-center mt-5">
+            <p class="chit-note mb-0">
+                Please review the scheme terms and conditions
+                before enrolment.
+            </p>
+        </div>
+
+    </div>
+</section>
+<!-- CHIT SCHEMES END -->
+
+
+<style>
+    /* Chit Schemes Section */
+    .chit-schemes {
+        background: linear-gradient(
+            180deg,
+            #fffdf8 0%,
+            #fbf5e9 100%
+        );
+        color: #4c3523;
+    }
+
+    .chit-eyebrow {
+        display: inline-block;
+        color: #9a6b26;
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+    }
+
+    .chit-title {
+        color: #5b321b;
+        font-size: clamp(1.8rem, 4vw, 2.6rem);
+        font-weight: 700;
+        letter-spacing: -0.035em;
+    }
+
+    .chit-description {
+        max-width: 620px;
+        color: #786958;
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .chit-divider {
+        width: 64px;
+        height: 3px;
+        border-radius: 10px;
+        background: linear-gradient(
+            90deg,
+            #bd8b3c,
+            #e8ca83
+        );
+    }
+
+    /* Scheme Cards */
+    .chit-scheme-link {
+        display: block;
+        height: 100%;
+        color: inherit;
+        border-radius: 18px;
+        outline-offset: 5px;
+    }
+
+    .chit-scheme-card {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        border: 1px solid #ead9b9;
+        border-radius: 18px;
+        background-color: #fffefa;
+        box-shadow: 0 8px 24px rgba(91, 50, 27, 0.05);
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease,
+            border-color 0.25s ease;
+    }
+
+    .chit-scheme-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(
+            90deg,
+            #9a6b26,
+            #ead29a,
+            #9a6b26
+        );
+    }
+
+    .chit-scheme-link:hover .chit-scheme-card,
+    .chit-scheme-link:focus-visible .chit-scheme-card {
+        transform: translateY(-6px);
+        border-color: #d5b46f;
+        box-shadow: 0 16px 36px rgba(91, 50, 27, 0.12);
+    }
+
+    .chit-scheme-link:focus-visible {
+        outline: 2px solid #9a6b26;
+    }
+
+    .chit-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 68px;
+        height: 68px;
+        border: 1px solid #ead9b9;
+        border-radius: 50%;
+        background-color: #fbf3df;
+        color: #946522;
+    }
+
+    .chit-card-title {
+        color: #63371e;
+        font-size: 1.2rem;
+        font-weight: 700;
+        line-height: 1.5;
+    }
+
+    .chit-card-description {
+        color: #786958;
+        font-size: 0.93rem;
+        line-height: 1.8;
+    }
+
+    .chit-card-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #8b3218;
+        font-size: 0.9rem;
+        font-weight: 700;
+        transition: gap 0.2s ease;
+    }
+
+    .chit-scheme-link:hover .chit-card-action {
+        gap: 15px;
+    }
+
+    .chit-note {
+        color: #82715f;
+        font-size: 0.85rem;
+        line-height: 1.7;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .chit-scheme-card,
+        .chit-card-action {
+            transition: none;
+        }
+
+        .chit-scheme-link:hover .chit-scheme-card {
+            transform: none;
+        }
+    }
+</style>
+
 <section class="container my-5" style="background: #fff4d7; color: #681016;">
         <div class="row align-items-center gy-4">
 
@@ -551,86 +796,330 @@ ul.dropdown-menu {
         </div>
     </section>
 
- <!-- COLLECTIONS --><!-- COLLECTIONS -->
-    <section id="collections" class="bg-light py-5 text-center">
-        <div class="container">
+<!-- PhotoSwipe CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.css">
 
-            <h2 class="mb-4"> Shop Gallery</h2>
+<!-- Gallery CSS -->
+<style>
+    /* Gallery image container: same dimensions for every image */
+    .gallery-box {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #f8f8f8;
+        position: relative;
+    }
 
-            <!-- GALLERY -->
-            <div class="row g-4">
+    /* Fill the box without stretching or distorting images */
+    .gallery-img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
 
-                <div class="col-6 col-md-4">
-                    <img src="https://www.sridhanalakshmijewellers.com/images/gallery-img-1.jpg"
-                        class="gallery-img img-fluid">
+    /* Subtle hover effect */
+    .gallery-box:hover .gallery-img {
+        transform: scale(1.04);
+    }
+
+    /* Prevent global animation rules from affecting PhotoSwipe */
+    .pswp img,
+    .pswp__img {
+        animation: none !important;
+    }
+
+    /* Responsive gallery */
+    @media (max-width: 576px) {
+        .gallery-box {
+            aspect-ratio: 1 / 1;
+        }
+    }
+
+    /* Pagination */
+    #gallery-pagination {
+        gap: 4px;
+    }
+
+    #gallery-pagination .page-link {
+        cursor: pointer;
+    }
+
+    #gallery-pagination .page-item.disabled .page-link {
+        cursor: not-allowed;
+    }
+    
+    
+</style>
+
+
+ <!-- JEWELLERY GALLERY -->
+        <section class="py-5 text-center mt-4">
+            <div class="container p-3" id="collections" style="background: #ffe4c4;">
+
+                <h2 class="mb-4">Our Jewellery Gallery</h2>
+
+                <div class="row g-4" id="gallery">
+                    <!-- Gallery images are rendered by JavaScript -->
                 </div>
 
-                <div class="col-6 col-md-4">
-                    <img src="https://www.sridhanalakshmijewellers.com/images/gallery-img-2.jpg"
-                        class="gallery-img img-fluid">
-                </div>
-
-                <div class="col-6 col-md-4">
-                    <img src="https://www.sridhanalakshmijewellers.com/images/gallery-img-7.webp"
-                        class="gallery-img img-fluid">
-                </div>
-
-                <div class="col-6 col-md-4">
-                    <img src="https://www.sridhanalakshmijewellers.com/images/gallery-img-4.jpg"
-                        class="gallery-img img-fluid">
-                </div>
-
-                <div class="col-6 col-md-4">
-                    <img src="https://www.sridhanalakshmijewellers.com/images/gallery-img-5.jpg"
-                        class="gallery-img img-fluid">
-                </div>
-
-                <div class="col-6 col-md-4">
-                    <img src="https://www.sridhanalakshmijewellers.com/images/small-images/sdj-poster-small.webp"
-                        class="gallery-img img-fluid">
-                </div>
+                <!-- Pagination -->
+                <nav class="mt-4" aria-label="Jewellery gallery pagination">
+                    <ul
+                        class="pagination justify-content-center flex-wrap"
+                        id="gallery-pagination">
+                    </ul>
+                </nav>
 
             </div>
+        </section>
 
-            <!-- COLLECTION TYPES -->
-            <!-- <div class="row mt-5 g-4" style="background: #13c5dd45;">
+<!-- SCRIPT -->
+<!-- GALLERY AND PHOTOSWIPE -->
+    <script type="module">
+        import PhotoSwipeLightbox from
+            'https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe-lightbox.esm.js';
 
-                <div class="col-6 col-md-3">
-                    <div class="collection-box">Gold Necklaces</div>
-                </div>
+        /*
+         * Jewellery gallery image URLs.
+         *
+         * The original corrupted code repeated the same six URLs.
+         * This list preserves those URLs and repetitions.
+         * Replace them with your own jewellery photographs when available.
+         */
+        // Load 50 local jewellery images ,automatic way: loading all images sdj-001 to sdj-050
+        const images = Array.from({ length: 50 }, (_, i) =>
+            `/images/gallery/sdj-${String(i + 1).padStart(3, "0")}.jpeg`
+        );
 
-                <div class="col-6 col-md-3">
-                    <div class="collection-box">Bridal Jewellery</div>
-                </div>
+        // Manual way: loading all images sdj-001 to sdj-050 by unique urls manually
+        // const images = [
+        //     "https://images.unsplash.com/photo-1611107683227-e9060eccd846?auto=format&fit=crop&w=1080&h=1080",
+        //     "https://images.unsplash.com/photo-1721103418312-b0057a8c31c2?auto=format&fit=crop&w=1080&h=1080",
+        //     "https://images.unsplash.com/photo-1724594888502-34f2b647ce33?auto=format&fit=crop&w=1080&h=1080",
+        //     "https://images.unsplash.com/photo-1626784215013-13322cb0e471?auto=format&fit=crop&w=1080&h=1080",
+        //     "https://images.unsplash.com/photo-1651160670627-2896ddf7822f?auto=format&fit=crop&w=1080&h=1080",
+        //     "https://images.unsplash.com/photo-1679156271456-d6068c543ee7?auto=format&fit=crop&w=1080&h=1080"
+        // ];
 
-                <div class="col-6 col-md-3">
-                    <div class="collection-box">Bangles & Chains</div>
-                </div>
+        // Gallery elements
+        const gallery = document.getElementById("gallery");
+        const pagination = document.getElementById("gallery-pagination");
 
-                <div class="col-6 col-md-3">
-                    <div class="collection-box">Temple Jewellery</div>
-                </div>
+        // edit Change this value to show more or fewer images per page 6,9,12 etc.
+        const imagesPerPage = 9;
 
-                <div class="col-6 col-md-3">
-                    <div class="collection-box">Silver Articles Collections</div>
-                </div>
+        const totalPages = Math.ceil(images.length / imagesPerPage);
 
-                <div class="col-6 col-md-3">
-                    <div class="collection-box">Diamond Jewellery</div>
-                </div>
+        let currentPage = 1;
 
-                <div class="col-6 col-md-3">
-                    <div class="collection-box">Custom Designs</div>
-                </div>
 
-                <div class="col-6 col-md-3">
-                    <div class="collection-box">Antique Collections</div>
-                </div>
 
-            </div> -->
+        // Prepare PhotoSwipe's complete image collection.
+        // Get the actual dimensions of every image to prevent stretching.
+        const photoSwipeItems = await Promise.all(
+            images.map((src, index) =>
+                new Promise((resolve) => {
+                    const img = new Image();
 
-        </div>
-    </section>
+                    img.onload = () => {
+                        resolve({
+                            src,
+                            width: img.naturalWidth,
+                            height: img.naturalHeight,
+                            w: img.naturalWidth,
+                            h: img.naturalHeight,
+                            alt: `Jewellery gallery image ${index + 1}`
+                        });
+                    };
+
+                    img.onerror = () => {
+                        console.error("Failed to load gallery image:", src);
+
+                        // Fallback dimensions if an image fails to load.
+                        resolve({
+                            src,
+                            width: 1080,
+                            height: 1080,
+                            w: 1080,
+                            h: 1080,
+                            alt: `Jewellery gallery image ${index + 1}`
+                        });
+                    };
+
+                    img.src = src;
+                })
+            )
+        );
+
+
+
+        // Initialize PhotoSwipe.
+        const lightbox = new PhotoSwipeLightbox({
+            dataSource: photoSwipeItems,
+
+            // Use the full image collection for navigation.
+            pswpModule: () =>
+                import('https://cdn.jsdelivr.net/npm/photoswipe@5/dist/photoswipe.esm.js')
+        });
+
+        lightbox.init();
+
+        // Render gallery thumbnails for the selected page.
+        function renderGallery(page) {
+            if (totalPages === 0) {
+                gallery.replaceChildren();
+                pagination.replaceChildren();
+                return;
+            }
+
+            currentPage = Math.max(1, Math.min(page, totalPages));
+
+            const startIndex = (currentPage - 1) * imagesPerPage;
+            const endIndex = Math.min(
+                startIndex + imagesPerPage,
+                images.length
+            );
+
+            const fragment = document.createDocumentFragment();
+
+            for (let imageIndex = startIndex; imageIndex < endIndex; imageIndex++) {
+                const column = document.createElement("div");
+                column.className = "col-6 col-md-4";
+
+                const box = document.createElement("div");
+                box.className = "gallery-box";
+
+                const img = document.createElement("img");
+
+                img.src = images[imageIndex];
+                img.alt = `Jewellery gallery image ${imageIndex + 1}`;
+                img.className = "gallery-img";
+                img.loading = "lazy";
+                img.decoding = "async";
+                img.dataset.index = String(imageIndex);
+
+                box.appendChild(img);
+                column.appendChild(box);
+                fragment.appendChild(column);
+            }
+
+            gallery.replaceChildren(fragment);
+
+            renderPagination();
+        }
+
+        // Create a pagination item.
+        function addPaginationItem(label, page, options = {}) {
+            const {
+                active = false,
+                disabled = false
+            } = options;
+
+            const item = document.createElement("li");
+            item.className = "page-item";
+
+            if (active) {
+                item.classList.add("active");
+            }
+
+            if (disabled) {
+                item.classList.add("disabled");
+            }
+
+            const link = document.createElement("a");
+            link.className = "page-link";
+            link.href = "#";
+            link.textContent = label;
+
+            if (active) {
+                link.setAttribute("aria-current", "page");
+            }
+
+            if (disabled) {
+                link.setAttribute("aria-disabled", "true");
+                link.tabIndex = -1;
+            }
+
+            link.addEventListener("click", event => {
+                event.preventDefault();
+
+                if (disabled || page === currentPage) {
+                    return;
+                }
+
+                renderGallery(page);
+
+                // Keep the gallery in view after changing pages.
+                const galleryTop =
+                    gallery.getBoundingClientRect().top + window.scrollY - 100;
+
+                window.scrollTo({
+                    top: Math.max(0, galleryTop),
+                    behavior: "smooth"
+                });
+            });
+
+            item.appendChild(link);
+            pagination.appendChild(item);
+        }
+
+        // Render Bootstrap pagination.
+        function renderPagination() {
+            pagination.replaceChildren();
+
+            if (totalPages <= 1) {
+                return;
+            }
+
+            // Previous
+            addPaginationItem("Previous", currentPage - 1, {
+                disabled: currentPage === 1
+            });
+
+            // Page numbers
+            for (let page = 1; page <= totalPages; page++) {
+                addPaginationItem(String(page), page, {
+                    active: page === currentPage
+                });
+            }
+
+            // Next
+            addPaginationItem("Next", currentPage + 1, {
+                disabled: currentPage === totalPages
+            });
+        }
+
+        // Open PhotoSwipe when a gallery thumbnail is clicked.
+        gallery.addEventListener("click", event => {
+            const img = event.target.closest(".gallery-img");
+
+            if (!img || !gallery.contains(img)) {
+                return;
+            }
+
+            const index = Number(img.dataset.index);
+
+            if (!Number.isInteger(index) || index < 0 || index >= images.length) {
+                return;
+            }
+
+            lightbox.loadAndOpen(index);
+        });
+
+        // Display the first page.
+        renderGallery(1);
+
+        // Clean up PhotoSwipe if the page is unloaded.
+        window.addEventListener("pagehide", () => {
+            lightbox.destroy();
+        }, { once: true });
+    </script>
+
 <!-- horizontal scroller -->
     <section class="py-3">
       <div class="text-center container">
